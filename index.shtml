@@ -18,7 +18,6 @@
    <a class="logo" href="#"><img src="images/logo.png" alt="Fix My Car" title="Fix My Car"></a>
    <nav>
    <ul>
-      <i class="fas fa-user"></i>
    <li><a href="#">Find Garages</a></li>
    <li><a href="#">How it Works</a></li>
    <li><a href="#">Contact</a></li>
