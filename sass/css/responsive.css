@@ -1,0 +1,27 @@
+@media screen and (max-width:1250px) {
+	.container { width: auto; }
+}
+@media screen and (max-width:1023px) {
+	.animated {
+	opacity: 1 !important;
+	visibility: visible !important;
+	-webkit-animation-name: none !important;
+	-moz-animation-name: none !important;
+	animation-name: none !important;
+	-webkit-animation-duration: 0s !important;
+	-moz-animation-duration: 0s !important;
+	animation-duration: 0s !important;
+	-webkit-animation-delay: 0s !important;
+	-moz-animation-delay: 0s !important;
+	animation-delay: 0s !important;
+	}
+}
+@media screen and (max-width:640px) {
+	[class^='col-xs-'] { float:none; width:100%; }
+}
+@media screen and (max-width:540px) {
+	
+}
+@media screen and (max-width:480px) {
+	
+}
