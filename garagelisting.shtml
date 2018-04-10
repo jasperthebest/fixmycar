@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+      <title>Garage Liting - Fixmycar</title>
+      <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+      <link href="css/style.css" rel="stylesheet">
+   </head>
+   <body>
+   
+   <header>
+   <div class="headflex">
+   <div>
+   <a class="logo" href="#"><img src="images/logo.png" alt="Fix My Car" title="Fix My Car"></a>
+   <nav>
+   <ul>
+   <li><a href="#">Find Garages</a></li>
+   <li><a href="#">How it Works</a></li>
+   <li><a href="#">Contact</a></li>
+   </ul>
+   </nav>
+   </div>
+   <div>
+   <ul>
+   <li><a href="tel:9003104830" class="callmobile">9003104830</a></li>
+   <li><a href="#" class="loginface"><span>Welcome<br/>Mr John D</span><img src="images/profile.jpg" alt=""></a></li>
+   </ul>
+   </div>
+   </div>
+   </header>
+   <div class="listingarage">
+   <div>
+   <div class="breadto">
+   <ul>
+   <li class="active">Request Quotes</li>
+   <li class="active">Review Quotes</li>
+   <li>Choose Garage</li>
+   </ul>
+   </div>
+   <div class="rightoverlay">
+   <div class="quoteblock">
+   <div class="quote__header">
+   <div>
+   <h6>4 Quotes</h6>
+   </div>
+   <div>
+   <div class="sortq">
+   <span>SORT By <small>High</small></span>
+   <div>
+   <ul>
+   <li>High</li>
+   <li>Low</li>
+   <li>Date</li>
+   </ul>
+   </div>
+   </div>
+   </div>
+   </div>
+   <div class="detailserve">
+   <div>
+   <span><strong>Full Service</strong> Ford Figo 1.5 Trend 1399 cc 2012 make</span>
+   </div>
+   <div>
+   <a href="#">EDIT</a>
+   </div>
+   </div>
+   </div>
+   <div class="listgare">
+   <div class="singlegarage">
+   <div>
+   <h5>Auto Solutions EK LTD</h5>
+   <p>Medavakkam, Chennai</p>
+   <ul class="starrate">
+   <li><img src="images/star.png"></li>
+   <li><img src="images/star.png"></li>
+   <li><img src="images/star.png"></li>
+   <li><img src="images/halfstar.png"></li>
+   <li><img src="images/nostar.png"></li>
+   <li>3.5 / 5</li>
+   </ul>
+   <strong>233 Reviews</strong>
+   <ul class="servicelist">
+   <li><i class="fas fa-wifi"></i>Gold Customer Service</li>
+   <li><i class="fas fa-wifi"></i>We Collect and Deliver</li>
+   <li><i class="fas fa-wifi"></i>Customer Wifi</li>
+   <li><i class="fas fa-wifi"></i>Customer Waiting Room</li>
+   </ul>
+   </div>
+   <div>
+   <div class="pricequote"><span>2000.00</span></div>
+   <a href="#" class="btn tertiary">Choose Garage</a>
+   <a href="#" class="btn quadrat">Call Garage</a>
+   <a href="#" class="btn quadrat">Message</a>
+   </div>
+   </div>
+   <div class="singlegarage">
+   <div>
+   <h5>Auto Solutions EK LTD</h5>
+   <p>Medavakkam, Chennai</p>
+   <ul class="starrate">
+   <li><img src="images/star.png"></li>
+   <li><img src="images/star.png"></li>
+   <li><img src="images/star.png"></li>
+   <li><img src="images/halfstar.png"></li>
+   <li><img src="images/nostar.png"></li>
+   <li>3.5 / 5</li>
+   </ul>
+   <strong>233 Reviews</strong>
+   <ul class="servicelist">
+   <li><i class="fas fa-wifi"></i>Gold Customer Service</li>
+   <li><i class="fas fa-wifi"></i>We Collect and Deliver</li>
+   <li><i class="fas fa-wifi"></i>Customer Wifi</li>
+   <li><i class="fas fa-wifi"></i>Customer Waiting Room</li>
+   </ul>
+   </div>
+   <div>
+   <div class="pricequote"><span>2000.00</span></div>
+   <a href="#" class="btn tertiary">Choose Garage</a>
+   <a href="#" class="btn quadrat">Call Garage</a>
+   <a href="#" class="btn quadrat">Message</a>
+   </div>
+   </div>
+   <div class="singlegarage">
+   <div>
+   <h5>Auto Solutions EK LTD</h5>
+   <p>Medavakkam, Chennai</p>
+   <ul class="starrate">
+   <li><img src="images/star.png"></li>
+   <li><img src="images/star.png"></li>
+   <li><img src="images/star.png"></li>
+   <li><img src="images/halfstar.png"></li>
+   <li><img src="images/nostar.png"></li>
+   <li>3.5 / 5</li>
+   </ul>
+   <strong>233 Reviews</strong>
+   <ul class="servicelist">
+   <li><i class="fas fa-wifi"></i>Gold Customer Service</li>
+   <li><i class="fas fa-wifi"></i>We Collect and Deliver</li>
+   <li><i class="fas fa-wifi"></i>Customer Wifi</li>
+   <li><i class="fas fa-wifi"></i>Customer Waiting Room</li>
+   </ul>
+   </div>
+   <div>
+   <div class="pricequote"><span>2000.00</span></div>
+   <a href="#" class="btn tertiary">Choose Garage</a>
+   <a href="#" class="btn quadrat">Call Garage</a>
+   <a href="#" class="btn quadrat">Message</a>
+   </div>
+   </div>
+   </div>
+   </div>
+   </div>
+   <div>
+   <div id="map_canvas"></div>
+   </div>
+   </div>
+   <footer>
+   <div class="footflex">
+   <div>
+   <span>&copy; 2018 fixmycar.com</span>
+   </div>
+   <div>
+   <strong>Follow Us</strong>
+   <ul>
+   <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+   <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+   </ul>
+   </div>
+   </div>
+   </footer>
+   <!-- script -->
+   <script src="https://maps.googleapis.com/maps/api/js"></script>
+   <script type="text/javascript">
+   function initialize() {
+  var map = new google.maps.Map(
+    document.getElementById("map_canvas"), {
+      center: new google.maps.LatLng(41.385932, 2.178678),
+      zoom: 13,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+  var image = {
+          url: 'http://www.homedepot.com/catalog/swatchImages/35/04/04a604de-8b52-4cd8-a394-6286f00b438d_35.jpg',
+          // This marker is 35 pixels wide by 35 pixels high.
+          size: new google.maps.Size(35, 35),
+          // The origin for this image is (0, 0).
+          origin: new google.maps.Point(0, 0),
+          // The anchor for this image is the base of the flagpole at (0, 32).
+          anchor: new google.maps.Point(0, 35)
+        };
+  var clickMarker = new google.maps.Marker({
+    position: map.getCenter(),
+    map: map,
+    draggable: true,
+    icon: image,
+    label: {
+      text: "50€",
+      color: 'white',
+      fontSize: '15px',
+      fontWeight: 'bold'
+    }
+  });
+}
+google.maps.event.addDomListener(window, "load", initialize);
+   </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="js/main.min.js"></script>
+   </body>
+</html>

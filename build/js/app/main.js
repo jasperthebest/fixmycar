@@ -12,6 +12,11 @@
 			$(this).parents('.downlister').siblings('.textbox').val(listval);
 		});
 
+		/* Header for subpage */
+		if($('.sectionfirst').length == 0) {
+			$('header').addClass('subpage');
+		}
+
 		/* Initial Dropdown */
 		$('.textbox').keyup(function(){
 			var inputValue = $(this).val().toLowerCase();
@@ -32,6 +37,17 @@
 		var curBg = $(this).data('bg');
 		$(this).css({'background-image':'url('+curBg+')'});
 		});
+
+		/* Sorting Drop down */
+		$('.sortq span').click(function(){
+			$(this).siblings('div').toggleClass('active');
+		});
+		$('.sortq div ul li').click(function(){
+			var val = $(this).text();
+			$('.sortq span small').text(val);
+			$(this).parents('div').removeClass('active');
+		});
+
 		/* Scroll Animation */ 
 		$('*[data-animated]').addClass('animated');
 			function animated_contents() {
@@ -53,7 +69,11 @@
 
 	/* Scroll */
 	$(window).scroll(function() {
-		
+		if($(document).scrollTop() >= 115){
+			$('.breadto, .listingarage>div:first-child').addClass('fixed');
+		} else {
+			$('.breadto, .listingarage>div:first-child').removeClass('fixed');
+		}
 	});
 	
 	/* Resize */
