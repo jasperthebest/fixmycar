@@ -284,6 +284,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
       a { margin-bottom: 12px;
         &:last-of-type { margin-bottom: 0; }
         &.quadrat, &.tertiary { padding: 9px 14px 11px; }
+        &.tertiary { min-width: 150px; }
       }
     }
   }
