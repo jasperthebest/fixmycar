@@ -1,5 +1,5 @@
 @import "normalize";
-@import "slick";
+/* @import "slick"; */
 @import "custom-variables";
 
 /* Common css */
@@ -261,7 +261,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 .singlegarage { background-color: $white; border-radius: 5px; display: flex; flex-flow: row wrap; margin-bottom: 20px; padding: 30px; 
   > div {
     &:first-child { width: calc(100% - 220px);
-      h5 { color: $blue2; padding-bottom: 10px; }
+      h5 { color: $blue2; font-weight: 800; padding-bottom: 10px; }
       p { color: $arrowgrey; padding-bottom: 15px; }
       strong { color: $blue2; display: block; padding-bottom: 20px; }
       .starrate { padding-bottom: 20px;
