@@ -197,7 +197,7 @@
     draggable: true,
     icon: image,
     label: {
-      text: "50€",
+      text: "₹ 50",
       color: 'white',
       fontSize: '15px',
       fontWeight: 'bold'
