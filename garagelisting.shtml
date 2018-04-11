@@ -27,7 +27,7 @@
    <div>
    <ul>
    <li><a href="tel:9003104830" class="callmobile">9003104830</a></li>
-   <li><a href="#" class="loginface"><span>Welcome<br/>Mr John D</span><img src="images/profile.jpg" alt=""></a></li>
+   <!-- <li><a href="#" class="loginface"><span>Welcome<br/>Mr John D</span><img src="images/profile.jpg" alt=""></a></li> -->
    </ul>
    </div>
    </div>
@@ -173,7 +173,8 @@
    </div>
    </footer>
    <!-- script -->
-   <script src="https://maps.googleapis.com/maps/api/js"></script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJaBIyElYHYmwSG4r8xtBoqn9-ZWZ81EE"
+  type="text/javascript"></script>
    <script type="text/javascript">
    function initialize() {
   var map = new google.maps.Map(

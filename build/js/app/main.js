@@ -69,10 +69,10 @@
 
 	/* Scroll */
 	$(window).scroll(function() {
-		if($(document).scrollTop() >= 115){
-			$('.breadto, .listingarage>div:first-child').addClass('fixed');
+		if($(document).scrollTop() >= 150){
+			$('.quoteblock, .listingarage>div:first-child').addClass('fixed');
 		} else {
-			$('.breadto, .listingarage>div:first-child').removeClass('fixed');
+			$('.quoteblock, .listingarage>div:first-child').removeClass('fixed');
 		}
 	});
 	
