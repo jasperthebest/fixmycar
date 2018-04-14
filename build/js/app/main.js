@@ -48,6 +48,12 @@
 			$(this).parents('div').removeClass('active');
 		});
 
+		/* Nav Mobile */
+		$('#nav-icon').click(function(){
+			$(this).toggleClass('active');
+			$('nav').toggleClass('active');
+		});
+
 		/* Scroll Animation */ 
 		$('*[data-animated]').addClass('animated');
 			function animated_contents() {
