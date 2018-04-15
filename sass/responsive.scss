@@ -22,6 +22,9 @@
   }
   #nav-icon { display: inline-block; }
   body { padding-top: 53px; }
+  header.subpage .headflex { padding: 10px 15px;
+   >div .logo img { width: 50px; } 
+  }
   .headflex { background-color: $hblue; padding: 10px 15px; position: fixed; top: 0; width: 100%; z-index: 21;
     div { margin: 0 auto;
       .mobilecall { display: inline-block; }
@@ -81,6 +84,22 @@
     }
   }
   footer { padding: 20px 15px; }
+  #map_canvas { height: 400px; }
+  .listingarage { flex-direction: column-reverse; 
+    > div {
+      &:first-child { padding: 30px 30px 0; width: 100%; }
+      &:last-child { width: 100%; }
+    }
+  }
+  .rightoverlay { margin-right: 0; }
+  .listingarage>div .breadto { display: none; }
+  .quoteblock.fixed { position: static; width: 100%; }
+  .singlegarage { padding: 20px;
+    >div {
+      &:first-child { width: calc(100% - 190px); }
+      &:last-child { padding-right: 0; width: 190px; }
+    }
+  }
 }
 
 @media screen and (max-width:940px) {
@@ -118,6 +137,17 @@
     }
   }
   .sectionthird { padding-top: 40px; }
+  .singlegarage { flex-direction: column; 
+    > div { 
+      &:first-child { width: 100%; }
+      &:last-child { text-align: center; width: 100%; 
+        .pricequote { padding-bottom: 15px; }
+        a { margin-bottom: 0; 
+          &.tertiary, &.quadrat { padding: 8px 10px; }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width:720px) {
@@ -129,6 +159,39 @@
   h3 { font-size: 26px; line-height: 34px; }
   h4 { font-size: 22px; line-height: 28px; }
   h5 { font-size: 16px; line-height: 24px; }
+  .listingarage>div:first-child { padding: 25px 15px 0; }
+}
+
+@media screen and (max-width:580px) {
+  .detailserve>div span { font-size: 12px; }
+  .quoteblock .sortq {
+    span { font-size: 12px; padding-right: 20px; 
+      &:before { font-size: 16px; line-height: 24px; }
+    }
+    >div ul li { font-size: 14px; padding: 5px 15px; }
+  }
+  .singlegarage {
+    >div {
+      &:first-child {
+        .servicelist {
+          li { display: block; padding-bottom: 10px; width: 100%;
+            i { padding-right: 10px; }
+          }
+        }
+      }
+      &:last-child {
+        .pricequote {
+          span { font-size: 26px; line-height: 32px; padding-left: 25px; 
+            &:before { font-size: 20px; line-height: 33px; }
+          }
+        }
+        a { font-size: 12px; margin-bottom: 10px; min-width: initial; width: 100%;
+          &:last-child { margin-bottom: 0; }
+          &.tertiary { min-width: initial; }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width:540px) {

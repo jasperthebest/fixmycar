@@ -285,7 +285,8 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 }
 .detailserve { background-color: $lrose; display: flex; flex-flow: row wrap; padding: 10px 15px;
   > div {
-    &:last-child { margin-left: auto; }
+    &:first-child { padding-right: 10px; width: calc(100% - 30px); }
+    &:last-child { width: 30px; }
     span { color: $arrowgrey; 
       strong { font-weight: 800; }
     }
