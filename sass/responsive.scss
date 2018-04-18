@@ -35,7 +35,7 @@
       nav { background-color: $white; display: block; height: 100%; left: 0; position: fixed; top: 0; transform: translateX(100%); transition: all .3s ease-out; visibility: hidden; width: 100%; z-index: 21;
         &.active { transform: translateX(0); visibility: visible; }
         ul { padding-top: 60px;
-          li { display: list-item; padding: 20px 10px; text-align: center;
+          li { display: list-item; padding: 12px 10px; text-align: center;
             a { color: $hblue; font-size: 18px; font-weight: 700; }
           }
         }
