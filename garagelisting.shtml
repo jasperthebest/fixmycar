@@ -80,6 +80,7 @@
    <div>
    <h5>Auto Solutions EK LTD</h5>
    <p>Medavakkam, Chennai</p>
+   <div class="pricequote"><span>2000.00</span></div>
    <ul class="starrate">
    <li><img src="images/star.png"></li>
    <li><img src="images/star.png"></li>

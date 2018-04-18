@@ -21,11 +21,11 @@
   animation-delay: 0s !important;
   }
   #nav-icon { display: inline-block; }
-  body { padding-top: 53px; }
-  header.subpage .headflex { padding: 10px 15px;
-   >div .logo img { width: 50px; } 
+  body { padding-top: 63px; }
+  header.subpage .headflex { padding: 15px;
+   > div .logo img { width: 50px; } 
   }
-  .headflex { background-color: $hblue; padding: 10px 15px; position: fixed; top: 0; width: 100%; z-index: 21;
+  .headflex { background-color: $hblue; padding: 15px; position: fixed; top: 0; width: 100%; z-index: 21;
     div { margin: 0 auto;
       .mobilecall { display: inline-block; }
       .logo { margin-right: 0;
@@ -35,7 +35,7 @@
       nav { background-color: $white; display: block; height: 100%; left: 0; position: fixed; top: 0; transform: translateX(100%); transition: all .3s ease-out; visibility: hidden; width: 100%; z-index: 21;
         &.active { transform: translateX(0); visibility: visible; }
         ul { padding-top: 60px;
-          li { display: list-item; padding: 5px 10px; text-align: center;
+          li { display: list-item; padding: 20px 10px; text-align: center;
             a { color: $hblue; font-size: 18px; font-weight: 700; }
           }
         }
@@ -67,7 +67,7 @@
         }
       }
       &:last-child { text-align: center; width: 100%; 
-        button { border-radius: 0; font-size: 14px; height: initial; padding: 8px 10px; width: 150px; }
+        button { border-radius: 0; font-size: 14px; height: initial; padding: 12px; width: 150px; }
       }
     } 
   }
@@ -114,7 +114,7 @@
 }
 
 @media screen and (max-width:767px) {
-  .topsection { padding-bottom: 0;
+  .topsection { padding: 15px 0 0;
     >div .topdesc { line-height: 40px; }
   }
   .inputbox {
@@ -139,9 +139,11 @@
   .sectionthird { padding-top: 40px; }
   .singlegarage { flex-direction: column; 
     > div { 
-      &:first-child { width: 100%; }
+      &:first-child { padding-bottom: 10px; width: 100%; 
+        .pricequote { display: inline-block; }
+      }
       &:last-child { text-align: center; width: 100%; 
-        .pricequote { padding-bottom: 15px; }
+        .pricequote { display: none; padding-bottom: 15px; }
         a { margin-bottom: 0; 
           &.tertiary, &.quadrat { padding: 8px 10px; }
         }
@@ -154,7 +156,7 @@
   .topsection>div .topdesc { line-height: 30px; 
     strong { font-size: 30px; }
   }
-  .homeform>div:last-child button { width: 120px; }
+  .homeform>div:last-child button { width: 150px; }
   h2 { font-size: 30px; line-height: 38px; }
   h3 { font-size: 26px; line-height: 34px; }
   h4 { font-size: 22px; line-height: 28px; }
@@ -195,7 +197,9 @@
 }
 
 @media screen and (max-width:540px) {
-  .featureflex>div { width: 100%; }
+  .featureflex>div { justify-content: center; width: 100%; 
+    &:nth-child(even) { flex-direction: row-reverse; }
+  }
   .homeform { padding-bottom: 0; }
   .sectionthird { padding-top: 30px; }
 }
