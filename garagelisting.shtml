@@ -179,11 +179,177 @@
    </div>
    </div>
    </footer>
-   <!-- script -->
+   <!-- script
    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJaBIyElYHYmwSG4r8xtBoqn9-ZWZ81EE"
-  type="text/javascript"></script>
+  type="text/javascript"></script> -->
+  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDJaBIyElYHYmwSG4r8xtBoqn9-ZWZ81EE&extension=.js"></script>
+  <script>
+          google.maps.event.addDomListener(window, 'load', init);
+            var map, markersArray = [];
+            function bindInfoWindow(marker, map, location) {
+              google.maps.event.addListener(marker, 'click', function() {
+                function close(location) {
+                  location.ib.close();
+                  location.infoWindowVisible = false;
+                  location.ib = null;
+                }
+                if (location.infoWindowVisible === true) {
+                  close(location);
+                } else {
+                  markersArray.forEach(function(loc, index) {
+                    if (loc.ib && loc.ib !== null) {
+                      close(loc);
+                    }
+                  });
+                  var boxText = document.createElement('div');
+                  boxText.style.cssText = 'background: #fff;';
+                  boxText.classList.add('md-whiteframe-2dp');
+
+                  function buildPieces(location, el, part, icon) {
+                    if (location[part] === '') {
+                      return '';
+                    } else if (location.iw[part]) {
+                      switch (el) {
+                        case 'photo':
+                          if (location.photo) {
+                            return '<div class="iw-photo" style="background-image: url(' + location.photo + ');"></div>';
+                          } else {
+                            return '';
+                          }
+                          break;
+                        case 'iw-toolbar':
+                          return '<div class="iw-toolbar"><h3 class="md-subhead">' + location.title + '</h3></div>';
+                          break;
+                        case 'div':
+                          switch (part) {
+                            case 'email':
+                              return '<div class="iw-details"><i class="material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><span><a href="mailto:' + location.email + '" target="_blank">' + location.email + '</a></span></div>'
+                              break;
+                            case 'web':
+                              return '<div class="iw-details"><i class="material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><span><a href="' + location.web + '" target="_blank">' + location.web_formatted + '</a></span></div>';
+                              break;
+                            case 'desc':
+                              return '<label class="iw-desc" for="cb_details"><input type="checkbox" id="cb_details"/><h3 class="iw-x-details">Details</h3><i class="material-icons toggle-open-details"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><p class="iw-x-details">' + location.desc + '</p></label>';
+                              break;
+                            default:
+                              return '<div class="iw-details"><i class="material-icons"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><span>' + location.part + '</span></div>';
+                              break;
+                          }
+                          break;
+                        case 'open_hours':
+                          var items = '';
+                          if (location.open_hours.length > 0) {
+                            for (var i = 0; i < location.open_hours.length; ++i) {
+                              if (i !== 0) {
+                                items += '<li><strong>' + location.open_hours[i].day + '</strong><strong>' + location.open_hours[i].hours + '</strong></li>';
+                              }
+                              var first = '<li><label for="cb_hours"><input type="checkbox" id="cb_hours"/><strong>location.open_hours[0].day</strong><strong>' + location.open_hours[0].hours + '</strong><i class="material-icons toggle-open-hours"><img src="//cdn.mapkit.io/v1/icons/keyboard_arrow_down.svg"/></i><ul>' + items + '</ul></label></li>';
+                            }
+                            return '<div class="iw-list"><i class="material-icons first-material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><ul>' + first + '</ul></div>';
+                          } else {
+                            return '';
+                          }
+                          break;
+                      }
+                    } else {
+                      return '';
+                    }
+                  }
+                  boxText.innerHTML = buildPieces(location, 'photo', 'photo', '') + buildPieces(location, 'iw-toolbar', 'title', '') + buildPieces(location, 'div', 'address', 'location_on') + buildPieces(location, 'div', 'web', 'public') + buildPieces(location, 'div', 'email', 'email') + buildPieces(location, 'div', 'tel', 'phone') + buildPieces(location, 'div', 'int_tel', 'phone') + buildPieces(location, 'open_hours', 'open_hours', 'access_time') + buildPieces(location, 'div', 'desc', 'keyboard_arrow_down');
+                  var myOptions = {
+                    alignBottom: true,
+                    content: boxText,
+                    disableAutoPan: true,
+                    maxWidth: 0,
+                    pixelOffset: new google.maps.Size(-140, -40),
+                    zIndex: null,
+                    boxStyle: {
+                      opacity: 1,
+                      width: '280px'
+                    },
+                    closeBoxMargin: '0px 0px 0px 0px',
+                    infoBoxClearance: new google.maps.Size(1, 1),
+                    isHidden: false,
+                    pane: 'floatPane',
+                    enableEventPropagation: false
+                  };
+                  location.ib = new InfoBox(myOptions);
+                  location.ib.open(map, marker);
+                  location.infoWindowVisible = true;
+                }
+              });
+            }
+            
+            function init() {
+              var mapOptions = {
+                center: new google.maps.LatLng(13.082488485878407, 80.27639761187743),
+                zoom: 17,gestureHandling: 'auto',fullscreenControl: false,zoomControl: true,
+                disableDoubleClickZoom: true,
+                
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                  style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                },
+                scaleControl: true,
+                scrollwheel: false,
+                streetViewControl: true,
+                draggable: true,
+                clickableIcons: false,
+                fullscreenControlOptions: {
+                  position: google.maps.ControlPosition.TOP_RIGHT
+                },
+                zoomControlOptions: {
+                  position: google.maps.ControlPosition.RIGHT_BOTTOM
+                },
+                streetViewControlOptions: {
+                  position: google.maps.ControlPosition.RIGHT_BOTTOM
+                },
+                mapTypeControlOptions: {
+                  position: google.maps.ControlPosition.TOP_LEFT
+                },
+                
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                
+                styles: [],
+                
+              }
+              var mapElement = document.getElementById('map_canvas');
+              var map = new google.maps.Map(mapElement, mapOptions);
+              var locations = [{"title":"Chennai Central Railway Station Waiting Hall","address":"Kannappar Thidal, Periyamet, Kannappar Thidal, Periyamet, Chennai, Tamil Nadu 600003, India","desc":"","tel":"044 2535 7398","int_tel":"+91 44 2535 7398","email":"","web":"http://www.sr.indianrailways.gov.in/","web_formatted":"sr.indianrailways.gov.in","open":"","time":"","lat":13.0824416,"lng":80.2758222,"vicinity":"Kannappar Thidal, Periyamet, Chennai","marker":"","iw":{"address":true,"desc":true,"email":true,"enable":true,"int_tel":true,"open":true,"open_hours":true,"photo":true,"tel":true,"title":true,"web":true}}];
+              var image = {
+                   url: 'http://www.homedepot.com/catalog/swatchImages/35/04/04a604de-8b52-4cd8-a394-6286f00b438d_35.jpg',
+                   // This marker is 35 pixels wide by 35 pixels high.
+                   size: new google.maps.Size(35, 35),
+                   // The origin for this image is (0, 0).
+                   origin: new google.maps.Point(0, 0),
+                   // The anchor for this image is the base of the flagpole at (0, 32).
+                   anchor: new google.maps.Point(0, 35)
+                 };    
+              for (i = 0; i < locations.length; i++) {
+                marker = new google.maps.Marker({
+                icon: locations[i].marker,
+                position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+                map: map,
+                icon: image,
+                label: {
+                  text: "₹ 50",
+                  color: 'white',
+                  fontSize: '15px',
+                  fontWeight: 'bold'
+                }
+              });
+
+              markersArray.push(marker);
+              
+              if (locations[i].iw.enable === true){
+                bindInfoWindow(marker, map, locations[i]);
+              }
+            }
+            
+            }
+        </script>
    <script type="text/javascript">
-   function initialize() {
+   /* function initialize() {
   var map = new google.maps.Map(
     document.getElementById("map_canvas"), {
       center: new google.maps.LatLng(41.385932, 2.178678),
@@ -213,6 +379,7 @@
   });
 }
 google.maps.event.addDomListener(window, "load", initialize);
+*/
    </script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="js/main.min.js"></script>
