@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             ]
         },
         dist: {
-            src: 'css/*.css'
+            src: 'css/style.css'
         }
     },
     uglify: {
