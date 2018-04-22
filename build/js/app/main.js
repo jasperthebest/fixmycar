@@ -6,6 +6,12 @@
 		/* Body Animate */
 		$('body').animate({'opacity':1}, 1500);
 
+		/* Outer Click */
+		$('body').click(function(){
+			$(this).removeClass('popact');
+			$('.lowdown').removeClass('active');
+		});
+
 		/* Dropdown menu */
 		$('.downlister ul li').click(function(){
 			var listval = $(this).text();
@@ -48,6 +54,36 @@
 			$(this).parents('div').removeClass('active');
 		});
 
+		/* Edit dropdown */
+		$('.selectbox a').click(function(e){
+			e.stopImmediatePropagation();
+			if(!$(this).siblings('.lowdown').hasClass('active')) {
+				$('.lowdown').removeClass('active');
+				$(this).siblings('.lowdown').addClass('active');
+			} else {
+				$('.lowdown').removeClass('active');
+			}
+		});
+		$('.lowdown ul li').click(function(){
+			$(this).parents('.selectbox').find('.select').html($(this).text());
+			$('.lowdown').removeClass('active');
+		});
+
+		/* Show Popup */
+		$('.popactbtn, .choosegar').click(function(){
+			$('body').addClass('popact');
+			return false;
+		});
+
+		/* Close Popup */
+		$('.closenow').click(function(){
+			$('body').removeClass('popact');
+			return false;
+		});
+		$('.carform, .popactbtn').click(function(e){
+			e.stopImmediatePropagation();
+		});
+
 		/* Nav Mobile */
 		$('#nav-icon').click(function(){
 			$(this).toggleClass('active');
@@ -75,10 +111,17 @@
 
 	/* Scroll */
 	$(window).scroll(function() {
+		/*
 		if($(document).scrollTop() >= 150){
 			$('.quoteblock, .listingarage>div:first-child').addClass('fixed');
 		} else {
 			$('.quoteblock, .listingarage>div:first-child').removeClass('fixed');
+		}
+		*/
+		if($(document).scrollTop() >= 213.49){
+			$('.detailserve, .quoteblock').addClass('fixed');
+		} else {
+			$('.detailserve, .quoteblock').removeClass('fixed');
 		}
 	});
 	

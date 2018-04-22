@@ -22,6 +22,17 @@ module.exports = function(grunt) {
         dest: 'js/main.js'
       }
     },
+    postcss: {
+        options: {
+            map: true,
+            processors: [
+                require('autoprefixer')({ browsers: ['last 8 versions', 'ie 9'] })
+            ]
+        },
+        dist: {
+            src: 'css/*.css'
+        }
+    },
     uglify: {
       options: {
         preserveComments: false
@@ -67,8 +78,9 @@ module.exports = function(grunt) {
   });
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.registerTask('default', ['compass','concat','uglify','connect','watch']);
+  grunt.registerTask('default', ['compass','concat','postcss','uglify','connect','watch']);
 };

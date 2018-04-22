@@ -1,6 +1,7 @@
 @import "normalize";
 /* @import "slick"; */
 @import "custom-variables";
+@import "dripicons";
 
 /* Common css */
 .clearfix {
@@ -52,14 +53,18 @@ input[type="text"], input[type="password"], textarea { border-radius: 0; appeara
 
 /* Basic setup */
 html { background-color: $white; }
-body { background-color: $white; color: $grey; font: 400 14px/22px $open; opacity: 0; }
+body { background-color: $white; color: $grey; font: 400 14px/22px $open; opacity: 0; 
+  &.popact { overflow: hidden; 
+    .popfetch { opacity: 1; transform: scale(1); visibility: visible; }
+  }
+}
 .coverBG { background-size: cover; background-repeat: no-repeat; }
-h1 { color: $dgrey; font: 700 40px/50px $open; padding-bottom: 25px; }
-h2 { color: $dgrey; font: 700 36px/44px $open; padding-bottom: 25px; }
-h3 { color: $dgrey; font: 700 30px/38px $open; padding-bottom: 15px; }
-h4 { color: $dgrey; font: 700 24px/30px $open; padding-bottom: 15px; }
-h5 { color: $dgrey; font: 700 18px/24px $open; padding-bottom: 15px; }
-h6 { color: $dgrey; font: 700 14px/20px $open; padding-bottom: 10px; }
+h1 { color: $dgrey; font: 600 40px/50px $open; padding-bottom: 25px; }
+h2 { color: $dgrey; font: 600 36px/44px $open; padding-bottom: 25px; }
+h3 { color: $dgrey; font: 600 30px/38px $open; padding-bottom: 15px; }
+h4 { color: $dgrey; font: 600 24px/30px $open; padding-bottom: 15px; }
+h5 { color: $dgrey; font: 600 18px/24px $open; padding-bottom: 15px; }
+h6 { color: $dgrey; font: 600 14px/20px $open; padding-bottom: 10px; }
 p { padding-bottom: 25px; }
 a { color: $dgrey; transition: all .3s linear; }
 
@@ -93,7 +98,7 @@ a { color: $dgrey; transition: all .3s linear; }
     &:nth-child(4) { top: 16px; }
   }
 }
-.sectionfirst { min-height: 700px; }
+.sectionfirst { }
 header {
   &.subpage { background-color: $hblue; 
     .headflex { padding: 15px 60px; 
@@ -115,7 +120,7 @@ header {
     }
   }
 }
-.headflex { display: flex; padding: 25px 60px;
+.headflex { border-bottom: .5px solid rgba($white, .8); display: flex; padding: 15px 60px;
   > div {
     .logo { display: inline-block; margin-right: 40px; }
     .mobilecall { color: $white; display: none; font-size: 18px; line-height: 24px; position: absolute; right: 15px; top: 19px; 
@@ -131,7 +136,7 @@ header {
       }
     }
     &:last-child { margin-left: auto; 
-      ul { display: inline-block; padding-top: 12px;
+      ul { display: inline-block; padding-top: 22px;
         li { display: inline-block; padding: 0 15px;
           .callmobile { color: $white; font-size: 16px; font-weight: 500; letter-spacing: 2px; 
             &:hover { color: $btnyellow; }
@@ -145,15 +150,15 @@ header {
     }
   }
 }
-.topsection { align-items: center; display: flex; min-height: calc(100vh - 265px); padding: 0 0 100px;
-  > div { width: 100%; 
-    h1 { color: $white; font-size: 30px; font-weight: 600; line-height: 64px; padding-bottom: 40px;
-      span { color: $btnyellow; display: block; font-size: 72px; font-weight: 800; }
+.topsection { align-items: center; display: flex;
+  > div { padding: 50px 0; width: 100%; 
+    h1 { color: $white; font-size: 30px; font-weight: 400; letter-spacing: 1px; line-height: 64px; padding-bottom: 40px;
+      span { color: $btnyellow; display: block; font-size: 72px; font-weight: 600; letter-spacing: 1px; }
     }
     p { color: $white; }
-    .topdesc { color: $white; display: block; font-size: 18px; font-weight: 600; line-height: 80px; padding-bottom: 60px;
-      strong { font-size: 70px; padding-left: 5px;
-        small { font-size: 30px; font-weight: 600; vertical-align: super; }
+    .topdesc { color: $white; display: block; font-size: 18px; line-height: 80px;
+      strong { font-size: 48px; padding-left: 5px; font-weight: 400;
+        small { color: $btnyellow; font-size: 30px; vertical-align: super; }
       }
     }
   }
@@ -211,30 +216,39 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
   }
 }
 .textbox { background-color: rgba($white, .25); border: 0; color: $white; padding: 20px; text-align: left; width: 100%; }
-.sectionsecond { padding: 0 60px 60px; position: relative; z-index: 5;
-  &:before { background-color: $layyellow; content: ''; height: calc(100% - 140px); left: 0; position: absolute; top: 140px; width: 100%; z-index: -1; }
-  > div { background-color: $white; border-radius: 5px; padding: 45px 50px; margin-top: -140px;
-    h2 { font-weight: 800; padding-bottom: 40px; }
+.sectionsecond { background-color: $white; overflow: hidden; padding: 40px 60px; position: relative; z-index: 5;
+  &:before { background-color: $darkyellow; content: ''; height: 40px; left: -10px; position: absolute; top: 0; transform: rotate(-1.9deg); transform-origin: left top; width: 80%; }
+  &:after { background-color: $bgyellow; bottom: 0; content: ''; height: 50px; left: 0; position: absolute; transform: rotate(-1.9deg); transform-origin: right bottom; width: 100%; }
+  > div { background-color: $white; border-radius: 5px; padding: 45px 50px;
+    h2 { letter-spacing: 1px; padding-bottom: 40px; text-align: center; }
   }
 }
-.worksflex { margin: 0 auto; width: 85%;
-    > div { display: flex; flex-flow: row wrap; padding-bottom: 30px;
-      &:nth-child(even) { flex-direction: row-reverse; 
+.worksflex { margin: 0 auto; width: 90%;
+    > div { display: flex; flex-flow: row-reverse wrap; padding-bottom: 30px;
+      &:last-child {
         > div {
-          &:last-child { text-align: left; }
+          &:first-child {
+            > div {
+              &:before { display: none; }
+            }
+          }
         }
       }
       > div {
         &:first-child { align-items: center; display: flex; width: calc(100% - 350px); 
-          span { background-color: $numyellow; color: $white; display: inline-block; font-size: 30px; font-weight: 800; line-height: 36px; margin-bottom: 10px; padding: 5px 10px; }
-          h4 { font-weight: 800; padding-bottom: 10px; }
+          > div { position: relative; 
+            &:before { background-color: $btnyellow; bottom: 0; content: ''; height: 85px; left: 8px; position: absolute; transform: translateY(100%); width: 1px; }
+          }
+          span { display: inline-block; font-size: 30px; font-weight: 600; line-height: 36px; padding: 0 0 10px; }
+          h4 { padding-bottom: 10px; }
+          p { line-height: 28px; }
         }
-        &:last-child { text-align: right; width: 350px; }
+        &:last-child { width: 350px; }
       }
     }
 }
-.sectionthird { padding: 50px 0 0;
-  .featuredesc { padding-bottom: 20px; 
+.sectionthird { background-color: $bgyellow; padding: 50px 0 0;
+  .featuredesc { padding-bottom: 20px; text-align: center;
     h2 { padding-bottom: 15px; }
   }
 }
@@ -243,31 +257,30 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
     h5 { font-weight: 600; padding-left: 20px; }
   }
 }
-.listingarage { display: flex; flex-flow: row wrap;
-  > div {
-    &.fixed { padding-top: 150px; }
-    &:first-child { background-color: $yellow2; padding-left: 60px; width: 60%; }
-    &:last-child { width: 40%; }
-    .breadto { background-color: $yellow2; padding: 30px 0; text-align: center;
-      ul {
-        li { display: inline-block; font-weight: 600; padding: 0 30px 0 35px; position: relative; 
-          &:before { border: 1px solid $green; border-radius: 100%; color: $white; content: ''; height: 24px; left: 0; position: absolute; top: -2px; transform: rotateY(180deg) rotate(120deg); width: 24px; }
-          &.active {
-            &:before { background-color: $green; content: '7'; }
-          }
-        }
+.listingarage { display: flex; flex-flow: row-reverse wrap;
+  > div { width: 50%;
+    &.fixed { padding-top: 128.2px; }
+  }
+}
+.breadto { background-color: $hblue; padding: 30px 0; text-align: center;
+  ul {
+    li { color: $white; display: inline-block; padding: 0 30px 0 35px; position: relative; 
+      &:before { border: 1px solid $green; border-radius: 100%; color: $white; content: ''; height: 24px; left: 0; position: absolute; top: -2px; transform: rotateY(180deg) rotate(120deg); width: 24px; }
+      &.active {
+        &:before { background-color: $green; content: '7'; }
       }
     }
   }
 }
-.quoteblock { background-color: $white; border-radius: 5px; box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2); margin-bottom: 20px; padding: 20px;
-  &.fixed { left: 60px; opacity: 1; position: fixed; top: 0; width: calc(60% - 60px + 100px); z-index: 12; }
+.quoteblock { background-color: $yellow2; padding: 20px 100px 25px 20px;
+  //&.fixed { opacity: 1; position: fixed; right: 0; top: 0; width: 50%; z-index: 12; }
+  &.fixed { padding-bottom: 66.6px; }
   .quote__header { display: flex; flex-flow: row wrap; padding-bottom: 20px;
     > div {
       &:last-child { margin-left: auto; }
     }
   }
-  h6 { font-weight: 800; padding-bottom: 0; }
+  h6 { padding-bottom: 0; }
   .sortq { position: relative; z-index: 5;
     span { cursor: pointer; color: $blue2; display: inline-block; padding-right: 25px; position: relative; text-transform: uppercase;
       &:before { color: $arrowgrey; content: '\f107'; font: 900 22px/28px 'Font Awesome 5 Free'; position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
@@ -283,27 +296,33 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
     }
   }
 }
-.detailserve { background-color: $lrose; display: flex; flex-flow: row wrap; padding: 10px 15px;
+.detailserve { background-color: $hblue; border-radius: 5px; display: flex; flex-flow: row wrap; margin-left: -120px; padding: 10px 15px; position: relative; z-index: 4;
+  &.fixed { margin-left: 0; position: fixed; right: 100px; top: 0; width: 50%; z-index: 6; }
   > div {
     &:first-child { padding-right: 10px; width: calc(100% - 30px); }
     &:last-child { width: 30px; }
-    span { color: $arrowgrey; 
-      strong { font-weight: 800; }
+    span { color: $white; display: inline-block; font-weight: 600; 
+      strong { font-weight: 600; }
     }
-    a { color: $red; display: inline-block; font-weight: 700; }
+    a { color: $white; display: inline-block; font-weight: 700; }
   }
 }
-.rightoverlay { margin-right: -100px; position: relative; z-index: 4; }
+.rightoverlay { position: relative; z-index: 4; }
 #map_canvas { height: 100%; margin: 0px; padding: 0px; width: 100%; }
-.singlegarage { background-color: $white; border-radius: 5px; box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2); display: flex; flex-flow: row wrap; margin-bottom: 20px; padding: 30px; 
+.listgare { border-top-left-radius: 5px; margin-left: -100px; position: relative; z-index: 5; }
+.singlegarage { background-color: $white; display: flex; flex-flow: row wrap; padding: 40px 100px 50px 50px; position: relative;
+  &:last-child {
+    &:before { display: none; }
+  }
+  &:before { background-color: $borderyellow; bottom: 0; content: ''; height: 1px; left: 50px; position: absolute; width: calc(100% - 150px); } 
   > div {
     &:first-child { width: calc(100% - 220px);
-      h5 { color: $blue2; font-weight: 800; padding-bottom: 10px; }
+      h5 { color: $blue2; font-weight: 600; padding-bottom: 10px; }
       p { color: $arrowgrey; padding-bottom: 15px; }
       strong { color: $blue2; display: block; padding-bottom: 20px; }
-      .pricequote { display: none; padding-bottom: 15px;
-        span { color: $blue2; display: inline-block; font-size: 30px; font-weight: 800; line-height: 36px; padding-left: 35px; position: relative; 
-          &:before { color: $blue2; content: '\f156'; font: 900 26px/36px 'Font Awesome 5 Free'; left: 0; position: absolute; top: 2px; }
+      .pricequote { padding-bottom: 15px;
+        span { color: $blue2; display: inline-block; font-size: 24px; font-weight: 600; line-height: 30px; padding-left: 20px; position: relative; 
+          &:before { color: $blue2; content: '\f156'; font: 900 20px/30px 'Font Awesome 5 Free'; left: 0; position: absolute; top: 2px; }
         }
       }
       .starrate { padding-bottom: 20px;
@@ -316,20 +335,143 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
           i { color: $bgyellow; display: inline-block; padding-right: 15px; }
         }
       }
-    }
-    &:last-child { margin-left: auto; padding-right: 10px; text-align: right; width: 220px;
-      .pricequote { padding-bottom: 20px;
-        span { color: $blue2; display: inline-block; font-size: 36px; font-weight: 800; line-height: 44px; padding-left: 35px; position: relative; 
-          &:before { color: $blue2; content: '\f156'; font: 900 30px/44px 'Font Awesome 5 Free'; left: 0; position: absolute; top: 2px; }
-        }
-      }
-      a { margin-bottom: 12px;
-        &:last-of-type { margin-bottom: 0; }
+      a { margin-right: 15px;
+        &:last-of-type { margin-right: 0; }
         &.quadrat, &.tertiary { padding: 9px 14px 11px; }
         &.tertiary { min-width: 150px; }
       }
     }
+    &:last-child { margin-left: auto; text-align: right; width: 220px;
+      .badgeplace { display: inline-block; font-weight: 600; padding-bottom: 20px;
+        img { margin-right: 10px; }
+      }
+      ul {
+        li { padding-bottom: 8px; }
+      }
+      /*
+      .pricequote { padding-bottom: 20px;
+        span { color: $blue2; display: inline-block; font-size: 36px; font-weight: 800; line-height: 44px; padding-left: 35px; position: relative; 
+          &:before { color: $blue2; content: '\f156'; font: 900 30px/44px 'Font Awesome 5 Free'; left: 0; position: absolute; top: 2px; }
+        }
+      } */
+    }
   }
+}
+.popfetch { background-color: rgba($bgyellow, .7); height: 100%; left: 0; opacity: 0; overflow-y: auto; padding: 25px; position: fixed; top: 0; transform: scale(0.9); transition: all .3s linear; visibility: hidden; width: 100%; z-index: 21; 
+  &.reviewfetch { padding-right: 0; }
+}
+.carshowflex { align-items: center; display: flex; justify-content: center; }
+.closepop { display: inline-block; font-size: 25px; line-height: 25px; position: absolute; right: 10px; top: 10px; z-index: 3; 
+  &:hover { color: $bgyellow; }
+}
+.carform { background-color: $white; box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2); border-radius: 5px; padding: 45px 35px 35px; position: relative; width: 420px; 
+  h6 { font-size: 16px; }
+  .boardnum { background-color: $yellow2; border-radius: 5px; box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2); display: inline-block; margin-bottom: 30px; padding: 10px 50px; position: relative;
+    &:before, &:after { background: url('../images/nail.png') no-repeat; content: ''; height: 9px; position: absolute; top: 50%; transform: translateY(-50%); width: 9px; }
+    &:before { left: 10px; }
+    &:after { right: 10px; }
+    small { display: block; font-size: 20px; font-weight: 600; line-height: 26px; }
+  }
+  .inputbox { border-bottom: 1px solid $borderyellow;
+    .textbox { color: $txtblue; padding: 25px 0 15px; }
+    span { color: $txtblue; font-size: 12px; left: 0; }
+  }
+  .moreinfo { display: block; font-size: 12px; font-weight: 600; padding: 15px 0 30px; }
+  .btn { min-width: 160px; }
+}
+.selectbox { border-bottom: 1px solid $borderyellow; padding: 10px 0; position: relative;
+  .desc { color: rgba($grey, .4); display: block; font-size: 12px; padding-bottom: 2px; }
+  a { color: $red; display: inline-block; font-size: 12px; position: absolute; right: 0; top: 10px; }
+  .select { display: block; font-size: 16px; font-weight: 600; }
+  .lowdown { background-color: $white; box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2); display: block; max-height: 158px; left: -35px; opacity: 0; overflow-y: auto; position: absolute; top: 100%; transition: all .3s ease-out; transform: translateY(10px); visibility: hidden; width: calc(100% + 70px); z-index: 9; 
+    &.active { opacity: 1; transform: translateY(0); visibility: visible; }
+    ul {
+      li { cursor: pointer; font-size: 16px; font-weight: 600; padding: 5px 35px; transition: all .3s linear;
+        &:hover { background-color: $bgyellow; color: $white; }
+      }
+    }
+  }
+}
+.reviewpop { align-items: center; display: flex; justify-content: flex-end; 
+  > div { padding-top: 70px; position: relative; }
+}
+.reviewmore { background-color: $white; border-top-left-radius: 5px; border-bottom-left-radius: 5px; overflow: hidden; padding: 60px 90px 90px; position: relative; width: 1250px;
+  &:after { background-color: $bgyellow; bottom: 0; content: ''; height: 50px; position: absolute; right: -30px; transform: rotate(-2.9deg); transform-origin: right bottom; width: 80%; }
+  h3 { padding-bottom: 5px; }
+  p { color: $arrowgrey; padding-bottom: 15px; }
+      strong { color: $blue2; display: block; padding-bottom: 20px; }
+    .pricequote { padding-bottom: 15px;
+      span { color: $blue2; display: inline-block; font-size: 24px; font-weight: 600; line-height: 30px; padding-left: 20px; position: relative; 
+        &:before { color: $blue2; content: '\f156'; font: 900 20px/30px 'Font Awesome 5 Free'; left: 0; position: absolute; top: 2px; }
+      }
+    }
+    .starrate { padding-bottom: 20px;
+      li { display: inline-block; padding: 0 2px; 
+        &:last-child { padding-left: 5px; vertical-align: middle; }
+      }
+    }
+}
+.twopartreview { display: flex; flex-flow: row wrap; 
+  > div { width: 50%; 
+    &:last-child { text-align: right; }
+  }
+  .secondary { margin-right: 20px; padding: 7px 14px; 
+    &:last-of-type { margin-right: 0; }
+  }
+}
+.quotepreview { padding-bottom: 25px; text-align: right;
+  small { display: block; font-size: 16px; line-height: 18px; }
+  span { color: $grey; display: inline-block; font-size: 30px; font-weight: 600; line-height: 34px; padding-left: 25px; position: relative; 
+      &:before { color: $grey; content: '\f156'; font: 900 24px/30px 'Font Awesome 5 Free'; left: 0; position: absolute; top: 2px; }
+    }
+}
+.reviewmap { padding-bottom: 10px; position: relative;
+  h6 { font-size: 16px; padding-bottom: 15px; }
+  a { color: $txtblue; display: inline-block; font-size: 16px; font-weight: 600; position: absolute; right: 0; top: 0; 
+    &:hover { color: $yellow2; }
+    img { margin-right: 5px; }
+  }
+}
+.reviewsidebar { border-radius: 4px; box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1); padding: 40px 75px 0;
+  > div { padding-bottom: 50px; text-align: center;
+    h5 { padding-bottom: 8px; }
+    ul {
+      li { padding-bottom: 7px; }
+    }
+    img { margin-bottom: 20px; }
+    span { display: block; padding-bottom: 5px;
+      &.time { background-color: $timeblue; border-radius: 15px; color: $white; display: inline-block; font-weight: 600; margin-bottom: 10px; padding: 0 15px; }
+      &.closer { font-weight: 600; }
+    }
+  }
+}
+.reviewtabflex { display: flex; flex-flow: row wrap; 
+  > div {
+    &:first-child { padding-right: 70px; width: calc(100% - 350px); }
+    &:last-child { width: 350px; }
+  }
+}
+.singlereview { display: flex; flex-flow: row wrap; padding-bottom: 15px;
+  > div {
+    &:first-child { width: 80px; 
+      img { border-radius: 100%; }
+    }
+    &:last-child { width: calc(100% - 80px); 
+      h6 { color: $blue2; }
+      .starrate { padding-bottom: 20px;
+        li { display: inline-block; padding: 0 2px; }
+      }
+    }
+  }
+}
+.allreviews {
+  h4 { padding-bottom: 30px; }
+}
+.loadreviews { color: $txtblue; display: inline-block; font-size: 16px; font-weight: 600; margin-left: 80px; position: relative; i { padding-left: 7px; position: relative; top: 2px; }
+   &:hover { color: $numyellow; } 
+}
+.closereview { background-color: $timeblue; border-radius: 100%; color: $white; display: inline-block; font-size: 28px; height: 40px; line-height: 46px; position: absolute; right: 90px; top: 0; transition: all .3s linear; width: 40px; text-align: center; 
+  &:hover { background-color: $white; color: $timeblue; }
 }
 
 @import "responsive";

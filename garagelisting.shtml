@@ -38,8 +38,6 @@
    </div>
    </div>
    </header>
-   <div class="listingarage">
-   <div>
    <div class="breadto">
    <ul>
    <li class="active">Request Quotes</li>
@@ -47,7 +45,8 @@
    <li>Choose Garage</li>
    </ul>
    </div>
-   <div class="rightoverlay">
+   <div class="listingarage">
+   <div>
    <div class="quoteblock">
    <div class="quote__header">
    <div>
@@ -78,9 +77,9 @@
    <div class="listgare">
    <div class="singlegarage">
    <div>
+   <div class="pricequote"><span>2000.00</span></div>
    <h5>Auto Solutions EK LTD</h5>
    <p>Medavakkam, Chennai</p>
-   <div class="pricequote"><span>2000.00</span></div>
    <ul class="starrate">
    <li><img src="images/star.png"></li>
    <li><img src="images/star.png"></li>
@@ -90,22 +89,22 @@
    <li>3.5 / 5</li>
    </ul>
    <strong>233 Reviews</strong>
-   <ul class="servicelist">
-   <li><i class="fas fa-wifi"></i>Gold Customer Service</li>
-   <li><i class="fas fa-wifi"></i>We Collect and Deliver</li>
-   <li><i class="fas fa-wifi"></i>Customer Wifi</li>
-   <li><i class="fas fa-wifi"></i>Customer Waiting Room</li>
-   </ul>
-   </div>
-   <div>
-   <div class="pricequote"><span>2000.00</span></div>
-   <a href="#" class="btn tertiary">Choose Garage</a>
+   <a href="#" class="btn tertiary choosegar">Choose Garage</a>
    <a href="#" class="btn quadrat">Call Garage</a>
    <a href="#" class="btn quadrat">Message</a>
+   </div>
+   <div>
+   <span class="badgeplace"><img src="images/badge.png" alt="Badge">Badges</span>
+   <ul class="servicelist">
+   <li>Gold Customer Service</li>
+   <li>We Collect and Deliver</li>
+   <li>Customer Wifi</li>
+   </ul>
    </div>
    </div>
    <div class="singlegarage">
    <div>
+   <div class="pricequote"><span>2000.00</span></div>
    <h5>Auto Solutions EK LTD</h5>
    <p>Medavakkam, Chennai</p>
    <ul class="starrate">
@@ -117,22 +116,22 @@
    <li>3.5 / 5</li>
    </ul>
    <strong>233 Reviews</strong>
-   <ul class="servicelist">
-   <li><i class="fas fa-wifi"></i>Gold Customer Service</li>
-   <li><i class="fas fa-wifi"></i>We Collect and Deliver</li>
-   <li><i class="fas fa-wifi"></i>Customer Wifi</li>
-   <li><i class="fas fa-wifi"></i>Customer Waiting Room</li>
-   </ul>
-   </div>
-   <div>
-   <div class="pricequote"><span>2000.00</span></div>
-   <a href="#" class="btn tertiary">Choose Garage</a>
+   <a href="#" class="btn tertiary choosegar">Choose Garage</a>
    <a href="#" class="btn quadrat">Call Garage</a>
    <a href="#" class="btn quadrat">Message</a>
+   </div>
+   <div>
+   <span class="badgeplace"><img src="images/badge.png" alt="Badge">Badges</span>
+   <ul class="servicelist">
+   <li>Gold Customer Service</li>
+   <li>We Collect and Deliver</li>
+   <li>Customer Wifi</li>
+   </ul>
    </div>
    </div>
    <div class="singlegarage">
    <div>
+   <div class="pricequote"><span>2000.00</span></div>
    <h5>Auto Solutions EK LTD</h5>
    <p>Medavakkam, Chennai</p>
    <ul class="starrate">
@@ -144,19 +143,17 @@
    <li>3.5 / 5</li>
    </ul>
    <strong>233 Reviews</strong>
-   <ul class="servicelist">
-   <li><i class="fas fa-wifi"></i>Gold Customer Service</li>
-   <li><i class="fas fa-wifi"></i>We Collect and Deliver</li>
-   <li><i class="fas fa-wifi"></i>Customer Wifi</li>
-   <li><i class="fas fa-wifi"></i>Customer Waiting Room</li>
-   </ul>
-   </div>
-   <div>
-   <div class="pricequote"><span>2000.00</span></div>
-   <a href="#" class="btn tertiary">Choose Garage</a>
+   <a href="#" class="btn tertiary choosegar">Choose Garage</a>
    <a href="#" class="btn quadrat">Call Garage</a>
    <a href="#" class="btn quadrat">Message</a>
    </div>
+   <div>
+   <span class="badgeplace"><img src="images/badge.png" alt="Badge">Badges</span>
+   <ul class="servicelist">
+   <li>Gold Customer Service</li>
+   <li>We Collect and Deliver</li>
+   <li>Customer Wifi</li>
+   </ul>
    </div>
    </div>
    </div>
@@ -179,6 +176,149 @@
    </div>
    </div>
    </footer>
+   <!-- Popup -->
+   <div class="popfetch reviewfetch">
+    <div class="reviewpop">
+      <div>
+        <a href="#" class="closereview"><i class="icon dripicons-cross"></i></a>
+        <div class="reviewmore">
+          <div class="twopartreview">
+            <div>
+              <h3>Auto Solutions EK LTD</h3>
+              <p>Medavakkam, Chennai</p>
+              <ul class="starrate">
+                 <li><img src="images/star.png"></li>
+                 <li><img src="images/star.png"></li>
+                 <li><img src="images/star.png"></li>
+                 <li><img src="images/halfstar.png"></li>
+                 <li><img src="images/nostar.png"></li>
+                 <li>3.5 / 5</li>
+              </ul>
+              <strong>65 Reviews</strong>
+            </div>
+            <div>
+              <div class="quotepreview"><small>Your Quote</small><span>2000.00</span></div>
+              <a href="#" class="btn secondary">Call Garage</a>
+              <a href="#" class="btn secondary">Message</a>
+            </div>
+          </div>
+          <div class="reviewestab">
+            <div class="reviewtabflex">
+              <div>
+                <div class="reviewmap">
+                  <h6>Established 2008</h6>
+                  <a href="#"><img src="images/viewmap.png" alt=""/> View Map</a>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum sapien id imperdiet placerat. Vivamus vel nibh euismod, mattis diam ut, commodo neque. Maecenas lobortis sapien in felis convallis, eget dignissim magna efficitur.</p>
+                </div>
+                <div class="allreviews">
+                  <h4>Reviews</h4>
+                  <div class="singlereview">
+                    <div>
+                      <img src="images/reviewface.jpg" alt="">
+                    </div>
+                    <div>
+                      <h6>Profile Name, Date</h6>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum sapien id imperdiet placerat. Vivamus vel nibh euismod, mattis diam ut, commodo neque. Maecenas lobortis sapien in felis convallis.</p>
+                      <ul class="starrate">
+                         <li><img src="images/star.png"></li>
+                         <li><img src="images/star.png"></li>
+                         <li><img src="images/star.png"></li>
+                         <li><img src="images/halfstar.png"></li>
+                         <li><img src="images/nostar.png"></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="singlereview">
+                    <div>
+                      <img src="images/reviewface.jpg" alt="">
+                    </div>
+                    <div>
+                      <h6>Profile Name, Date</h6>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum sapien id imperdiet placerat. Vivamus vel nibh euismod, mattis diam ut, commodo neque. Maecenas lobortis sapien in felis convallis.</p>
+                      <ul class="starrate">
+                         <li><img src="images/star.png"></li>
+                         <li><img src="images/star.png"></li>
+                         <li><img src="images/star.png"></li>
+                         <li><img src="images/halfstar.png"></li>
+                         <li><img src="images/nostar.png"></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="singlereview">
+                    <div>
+                      <img src="images/reviewface.jpg" alt="">
+                    </div>
+                    <div>
+                      <h6>Profile Name, Date</h6>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum sapien id imperdiet placerat. Vivamus vel nibh euismod, mattis diam ut, commodo neque. Maecenas lobortis sapien in felis convallis.</p>
+                      <ul class="starrate">
+                         <li><img src="images/star.png"></li>
+                         <li><img src="images/star.png"></li>
+                         <li><img src="images/star.png"></li>
+                         <li><img src="images/halfstar.png"></li>
+                         <li><img src="images/nostar.png"></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="singlereview">
+                    <div>
+                      <img src="images/reviewface.jpg" alt="">
+                    </div>
+                    <div>
+                      <h6>Profile Name, Date</h6>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum sapien id imperdiet placerat. Vivamus vel nibh euismod, mattis diam ut, commodo neque. Maecenas lobortis sapien in felis convallis.</p>
+                      <ul class="starrate">
+                         <li><img src="images/star.png"></li>
+                         <li><img src="images/star.png"></li>
+                         <li><img src="images/star.png"></li>
+                         <li><img src="images/halfstar.png"></li>
+                         <li><img src="images/nostar.png"></li>
+                      </ul>
+                    </div>
+                  </div>                                    
+                </div>
+                <a href="#" class="loadreviews">View All Reviews<i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div>
+               <div class="reviewsidebar">
+                <div>
+                  <img src="images/sidebadge.png" alt="">
+                  <h5>Badges</h5>
+                  <ul>
+                    <li>Gold Customer Service</li>
+                    <li>We Collect and Deliver</li>
+                    <li>Customer Wifi</li>
+                  </ul>
+                </div>
+                <div>
+                  <img src="images/sidework.png" alt="">
+                  <h5>Working Hours</h5>
+                  <span>Monday to Saturday</span>
+                  <span class="time">10 am to 6 pm</span>
+                  <span>Sunday</span>
+                  <span class="closer">CLOSED</span>
+                </div>
+                <div>
+                  <img src="images/sideservice.png" alt="">
+                  <h5>Service Offered</h5>
+                  <ul>
+                    <li>Engine &amp; Cooling</li>
+                    <li>Clutch and Gearbox repair</li>
+                    <li>Electrical and Batteries</li>
+                    <li>Streeing and Suspension</li>
+                    <li>Tyres and Tracking</li>
+                  </ul>
+                </div>
+               </div> 
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
    <!-- script
    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJaBIyElYHYmwSG4r8xtBoqn9-ZWZ81EE"
   type="text/javascript"></script> -->
@@ -317,13 +457,7 @@
               var map = new google.maps.Map(mapElement, mapOptions);
               var locations = [{"title":"Chennai Central Railway Station Waiting Hall","address":"Kannappar Thidal, Periyamet, Kannappar Thidal, Periyamet, Chennai, Tamil Nadu 600003, India","desc":"","tel":"044 2535 7398","int_tel":"+91 44 2535 7398","email":"","web":"http://www.sr.indianrailways.gov.in/","web_formatted":"sr.indianrailways.gov.in","open":"","time":"","lat":13.0824416,"lng":80.2758222,"vicinity":"Kannappar Thidal, Periyamet, Chennai","marker":"","iw":{"address":true,"desc":true,"email":true,"enable":true,"int_tel":true,"open":true,"open_hours":true,"photo":true,"tel":true,"title":true,"web":true}}];
               var image = {
-                   url: 'http://www.homedepot.com/catalog/swatchImages/35/04/04a604de-8b52-4cd8-a394-6286f00b438d_35.jpg',
-                   // This marker is 35 pixels wide by 35 pixels high.
-                   size: new google.maps.Size(35, 35),
-                   // The origin for this image is (0, 0).
-                   origin: new google.maps.Point(0, 0),
-                   // The anchor for this image is the base of the flagpole at (0, 32).
-                   anchor: new google.maps.Point(0, 35)
+                   url: 'images/mappin.png'
                  };    
               for (i = 0; i < locations.length; i++) {
                 marker = new google.maps.Marker({
@@ -332,7 +466,7 @@
                 map: map,
                 icon: image,
                 label: {
-                  text: "₹ 50",
+                  text: "₹ 5000",
                   color: 'white',
                   fontSize: '15px',
                   fontWeight: 'bold'

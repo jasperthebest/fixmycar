@@ -90,7 +90,7 @@
    </div>
    </div>
    <div>
-   <button class="btn secondary">Get Quotes</button>
+   <button class="btn secondary popactbtn">Get Quotes</button>
    </div>
    </div>
    <span class="topdesc">Connected with <strong>500<small>+</small></strong> Garage &amp; Completed successful <strong>12,000<small>+</small></strong> Services</span>
@@ -120,7 +120,7 @@
    <div>
    <span>2</span>
    <h4>Receive Your Quotes</h4>
-   <p>Tell us what you’re looking for or what needs fixing on your car and we’ll find the best garages nearby and give you the best price for the job.</p>
+   <p>Once you have received your quotes from our specialist mechanics, garages or dealerships it’s time for you to select the quote that’s right for you.</p>
    </div>
    </div>
    <div>
@@ -132,7 +132,7 @@
    <div>
    <span>3</span>
    <h4>Choose Your Garage</h4>
-   <p>Once you have received your quotes from our specialist mechanics, garages or dealerships it’s time for you to select the quote that’s right for you.</p>
+   <p>To show you’re happy, leave the garage a review and recommend the garage to friends and others on WhoCanFixmycar.com</p>
    </div>
    </div>
    <div>
@@ -203,6 +203,89 @@
    </div>
    </div>
    </footer>
+   <!-- Popup -->
+   <div class="popfetch">
+      <div class="carshowflex">
+         <div>
+            <div class="carform">
+               <a href="#" class="closepop closenow"><i class="icon dripicons-cross"></i></a>
+               <div class="text-center">
+                  <h6>Please Verify Your Car</h6>
+                  <p>We fetched the car details based on your car number. <br/>Just check if everything is alright.</p>
+                  <span class="boardnum">Car Reg No<small>TN 07 BC 1234</small></span>
+               </div>
+               <div class="selectbox">
+               <span class="desc">YOUR CAR BRAND</span>
+               <a href="#">EDIT</a>
+               <span class="select">FORD</span>
+               <div class="lowdown">
+                  <ul>
+                     <li>BMW</li>
+                     <li>AUDI</li>
+                     <li>BENZ</li>
+                     <li>ALICE</li>
+                  </ul>
+               </div>
+               </div>
+               <div class="selectbox">
+               <span class="desc">CAR MODEL</span>
+               <a href="#">EDIT</a>
+               <span class="select">Figo</span>
+               <div class="lowdown">
+                  <ul>
+                     <li>Figo</li>
+                     <li>Vriro</li>
+                     <li>Griti</li>
+                     <li>Vrit</li>
+                  </ul>
+               </div>
+               </div>
+               <div class="selectbox">
+               <span class="desc">VARIANT</span>
+               <a href="#">EDIT</a>
+               <span class="select">1.5 D Trend 1399 CC</span>
+               <div class="lowdown">
+                  <ul>
+                     <li>1.3 D Trend 1499 CC</li>
+                     <li>1.5 D Trend 1399 CC</li>
+                     <li>1.4 D Trend 1399 CC</li>
+                     <li>1.2 D Trend 1099 CC</li>
+                  </ul>
+               </div>
+               </div>
+               <div class="selectbox">
+               <span class="desc">MAKE</span>
+               <a href="#">EDIT</a>
+               <span class="select">2012</span>
+               <div class="lowdown">
+                  <ul>
+                     <li>2012</li>
+                     <li>2013</li>
+                     <li>2014</li>
+                     <li>2015</li>
+                  </ul>
+               </div>
+               </div>
+               <div class="inputbox">
+                  <input type="text" name="" class="textbox" required="">
+                  <span>ENTER YOUR NAME</span>
+               </div>
+               <div class="inputbox">
+                  <input type="text" name="" class="textbox" required="">
+                  <span>EMAIL</span>
+               </div>
+               <div class="inputbox">
+                  <input type="text" name="" class="textbox" required="">
+                  <span>PHONE</span>
+               </div>
+               <span class="moreinfo">Give more info (optional)</span>
+               <div class="text-center">
+                  <a href="#" class="btn tertiary">GET QUOTES</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
    <!-- script -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="js/main.min.js"></script>
