@@ -52,12 +52,14 @@ input[type="text"], input[type="password"], textarea { border-radius: 0; appeara
 
 
 /* Basic setup */
-html { background-color: $white; }
-body { background-color: $white; color: $grey; font: 400 14px/22px $open; opacity: 0; 
-  &.popact { overflow: hidden; 
-    .popfetch { opacity: 1; transform: scale(1); visibility: visible; }
+html { background-color: $white; 
+  &.popact { height: 100%; overflow: hidden; position: relative;
+    body { height: 100%; overflow: hidden; position: relative; 
+      .popfetch { opacity: 1; transform: scale(1); visibility: visible; }
+    }
   }
 }
+body { background-color: $white; color: $grey; font: 400 14px/22px $open; opacity: 0; }
 .coverBG { background-size: cover; background-repeat: no-repeat; }
 h1 { color: $dgrey; font: 600 40px/50px $open; padding-bottom: 25px; }
 h2 { color: $dgrey; font: 600 36px/44px $open; padding-bottom: 25px; }
@@ -98,7 +100,6 @@ a { color: $dgrey; transition: all .3s linear; }
     &:nth-child(4) { top: 16px; }
   }
 }
-.sectionfirst { }
 header {
   &.subpage { background-color: $hblue; 
     .headflex { padding: 15px 60px; 
@@ -202,7 +203,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 .inputbox { position: relative; z-index: 6;
   span { color: $white; display: inline-block; font-size: 15px; left: 20px; position: absolute; text-transform: uppercase; transform: translateY(0) scale(1); transform-origin: left; transition: all .3s ease; top: 20px; z-index: -1; }
   .textbox { padding: 25px 20px 15px;
-    &:focus + span, &:valid + span { transform: translateY(-15px) scale(.6); }
+    &:focus + span, &:valid + span { transform: translateY(-15px) scale(.65); }
     &:focus ~ .downlister { opacity: 1; transform: translateY(0); visibility: visible; }
     &:focus:valid ~ .downlister { opacity: 1; visibility: visible; transform: translateY(0); }
   }
@@ -217,7 +218,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 }
 .textbox { background-color: rgba($white, .25); border: 0; color: $white; padding: 20px; text-align: left; width: 100%; }
 .sectionsecond { background-color: $white; overflow: hidden; padding: 40px 60px; position: relative; z-index: 5;
-  &:before { background-color: $darkyellow; content: ''; height: 40px; left: -10px; position: absolute; top: 0; transform: rotate(-1.9deg); transform-origin: left top; width: 80%; }
+  &:before { background-color: $darkyellow; content: ''; height: 40px; left: -10px; position: absolute; top: 0; transform: rotate(-1.9deg); transform-origin: left top; width: 1200px; }
   &:after { background-color: $bgyellow; bottom: 0; content: ''; height: 50px; left: 0; position: absolute; transform: rotate(-1.9deg); transform-origin: right bottom; width: 100%; }
   > div { background-color: $white; border-radius: 5px; padding: 45px 50px;
     h2 { letter-spacing: 1px; padding-bottom: 40px; text-align: center; }
@@ -281,8 +282,8 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
     }
   }
   h6 { padding-bottom: 0; }
-  .sortq { position: relative; z-index: 5;
-    span { cursor: pointer; color: $blue2; display: inline-block; padding-right: 25px; position: relative; text-transform: uppercase;
+  .sortq { position: relative; z-index: 9;
+    span { cursor: pointer; color: $blue2; display: inline-block; font-size: 12px; font-weight: 600; padding-right: 25px; position: relative; text-transform: uppercase;
       &:before { color: $arrowgrey; content: '\f107'; font: 900 22px/28px 'Font Awesome 5 Free'; position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
       small { font-size: 100%; text-transform: uppercase; }
     }
@@ -316,7 +317,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
   }
   &:before { background-color: $borderyellow; bottom: 0; content: ''; height: 1px; left: 50px; position: absolute; width: calc(100% - 150px); } 
   > div {
-    &:first-child { width: calc(100% - 220px);
+    &:first-child { width: calc(100% - 160px);
       h5 { color: $blue2; font-weight: 600; padding-bottom: 10px; }
       p { color: $arrowgrey; padding-bottom: 15px; }
       strong { color: $blue2; display: block; padding-bottom: 20px; }
@@ -341,7 +342,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
         &.tertiary { min-width: 150px; }
       }
     }
-    &:last-child { margin-left: auto; text-align: right; width: 220px;
+    &:last-child { margin-left: auto; text-align: right; width: 160px;
       .badgeplace { display: inline-block; font-weight: 600; padding-bottom: 20px;
         img { margin-right: 10px; }
       }
@@ -396,7 +397,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
   > div { padding-top: 70px; position: relative; }
 }
 .reviewmore { background-color: $white; border-top-left-radius: 5px; border-bottom-left-radius: 5px; overflow: hidden; padding: 60px 90px 90px; position: relative; width: 1250px;
-  &:after { background-color: $bgyellow; bottom: 0; content: ''; height: 50px; position: absolute; right: -30px; transform: rotate(-2.9deg); transform-origin: right bottom; width: 80%; }
+  &:after { background-color: $bgyellow; bottom: 0; content: ''; height: 50px; position: absolute; right: -30px; transform: rotate(-2.9deg); transform-origin: right bottom; width: 1100px; }
   h3 { padding-bottom: 5px; }
   p { color: $arrowgrey; padding-bottom: 15px; }
       strong { color: $blue2; display: block; padding-bottom: 20px; }
@@ -419,7 +420,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
     &:last-of-type { margin-right: 0; }
   }
 }
-.quotepreview { padding-bottom: 25px; text-align: right;
+.quotepreview { padding-bottom: 25px;
   small { display: block; font-size: 16px; line-height: 18px; }
   span { color: $grey; display: inline-block; font-size: 30px; font-weight: 600; line-height: 34px; padding-left: 25px; position: relative; 
       &:before { color: $grey; content: '\f156'; font: 900 24px/30px 'Font Awesome 5 Free'; left: 0; position: absolute; top: 2px; }

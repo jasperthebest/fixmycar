@@ -22,10 +22,10 @@
    <span></span>
    </div>
    <a href="tel:9003104830" class="mobilecall"><i class="fas fa-phone"></i></a>
-   <a class="logo" href="#"><img src="images/logo.png" alt="Fix My Car" title="Fix My Car"></a>
+   <a class="logo" href="index.shtml"><img src="images/logo.png" alt="Fix My Car" title="Fix My Car"></a>
    <nav>
    <ul>
-   <li><a href="#">Find Garages</a></li>
+   <li><a href="garagelisting.shtml">Find Garages</a></li>
    <li><a href="#">How it Works</a></li>
    <li><a href="#">Contact</a></li>
    </ul>

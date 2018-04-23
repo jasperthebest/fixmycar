@@ -8,7 +8,7 @@
 
 		/* Outer Click */
 		$('body').click(function(){
-			$(this).removeClass('popact');
+			$('html').removeClass('popact');
 			$('.lowdown').removeClass('active');
 		});
 
@@ -71,16 +71,16 @@
 
 		/* Show Popup */
 		$('.popactbtn, .choosegar').click(function(){
-			$('body').addClass('popact');
+			$('html').addClass('popact');
 			return false;
 		});
 
 		/* Close Popup */
 		$('.closenow').click(function(){
-			$('body').removeClass('popact');
+			$('html').removeClass('popact');
 			return false;
 		});
-		$('.carform, .popactbtn').click(function(e){
+		$('.carform, .popactbtn, .reviewmore').click(function(e){
 			e.stopImmediatePropagation();
 		});
 

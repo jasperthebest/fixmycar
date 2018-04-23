@@ -2,6 +2,34 @@
 
 /* Responsive Code */
 
+@media screen and (max-width:1300px) {
+ .singlegarage>div:first-child a { margin-right: 5px; padding: 9px 10px; }
+ .reviewmore { width: 100%; }
+}
+  
+@media screen and (max-width:1240px) {
+  .sectionsecond:before { display: none; }
+  .singlegarage { padding: 50px;
+    > div{
+      &:first-child {
+        a.quadrat, a.tertiary { min-width: initial; }
+      }
+    }
+  }
+  .quoteblock { padding-right: 50px; }
+  .detailserve.fixed { right: 50px; width: calc(50% + 50px); }
+}
+@media screen and (max-width:1150px) {
+  .reviewmore:after { display: none; }
+}
+@media screen and (max-width:1060px) {
+  .singlegarage { padding: 30px; }
+  .detailserve.fixed { right: 30px; width: calc(50% + 70px); }
+  .quoteblock { padding-right: 30px; }
+  .reviewmore { padding: 40px; }
+  .closereview { right: 40px; }
+  .reviewtabflex>div:first-child { padding-right: 40px; }
+}
 @media screen and (max-width:1040px) {
   .container { width: auto; }
 }
@@ -22,10 +50,10 @@
   }
   #nav-icon { display: inline-block; }
   body { padding-top: 63px; }
-  header.subpage .headflex { padding: 15px;
+  header.subpage .headflex { border-bottom: 0.5px solid rgba(255,255,255,0.8); padding: 15px;
    > div .logo img { width: 50px; } 
   }
-  .headflex { background-color: $hblue; padding: 15px; position: fixed; top: 0; width: 100%; z-index: 21;
+  .headflex { background-color: $hblue; border-bottom: none; padding: 15px; position: fixed; top: 0; width: 100%; z-index: 21;
     div { margin: 0 auto;
       .mobilecall { display: inline-block; }
       .logo { margin-right: 0;
@@ -42,8 +70,11 @@
       }
     }
   }
+  .quoteblock { padding: 20px;
+    &.fixed { padding-bottom: 25px; }
+  }
   .sectionfirst { min-height: initial; }
-  .sectionsecond { background-color: $layyellow; padding: 30px;
+  .sectionsecond { padding: 30px;
     >div { margin-top: 0; }
   }
   .topsection { padding: 0;
@@ -83,23 +114,27 @@
       }
     }
   }
+  .breadto { padding: 20px 0; }
   footer { padding: 20px 15px; }
   #map_canvas { height: 400px; }
   .listingarage { flex-direction: column-reverse; 
     > div {
-      &:first-child { padding: 30px 30px 0; width: 100%; }
+      &:first-child { padding: 0; width: 100%; }
       &:last-child { width: 100%; }
     }
   }
   .rightoverlay { margin-right: 0; }
-  .listingarage>div .breadto { display: none; }
-  .quoteblock.fixed { position: static; width: 100%; }
-  .singlegarage { padding: 20px;
-    >div {
-      &:first-child { width: calc(100% - 190px); }
-      &:last-child { padding-right: 0; width: 190px; }
-    }
+  .singlegarage { border-bottom: 1px solid $borderyellow; padding: 20px; 
+    &:before { display: none; }
+    &:last-of-type { border-bottom: none; }
   }
+  .listgare { margin-left: 0; padding: 15px 0; }
+  .detailserve { margin-left: 0;
+    &.fixed { position: static; width: 100%; }
+  }
+  .sectionthird { padding-top: 10px; }
+  .selectbox .lowdown { left: 0; width: 100%; }
+  .reviewsidebar>div { padding-bottom: 30px; }
 }
 
 @media screen and (max-width:940px) {
@@ -111,6 +146,31 @@
   .featureflex { padding-bottom: 20px; 
     >div { padding-bottom: 25px; width: 50%; }
   }
+  .reviewmore { padding: 40px 30px; }
+  .reviewsidebar { padding: 40px 30px 0; }
+  .reviewtabflex>div {
+    &:first-child { padding-right: 30px; width: calc(100% - 280px); }
+    &:last-child { width: 280px; }
+  }
+  .closereview { right: 25px; }
+}
+
+@media screen and (max-width:860px) {
+  .reviewtabflex { flex-direction: column-reverse;
+    > div {
+      &:first-child { padding-right: 0; width: 100%; }
+      &:last-child { width: 100%; }
+    }
+  }
+  .quotepreview { padding-bottom: 15px; }
+  .twopartreview { flex-direction: column-reverse; 
+    > div { width: 100%; 
+      &:last-child { padding-bottom: 25px; text-align: center; }
+    }
+  }
+  .reviewsidebar { box-shadow: none; padding: 0; 
+    div { padding-bottom: 20px; }
+  }
 }
 
 @media screen and (max-width:767px) {
@@ -121,7 +181,7 @@
     .textbox { padding: 25px 20px 10px; }
     span { font-size: 12px; top: 18px; }
   }
-  .sectionsecond>div { padding: 30px 15px 0; 
+  .sectionsecond>div { padding-bottom: 40px; 
     h2 { padding-bottom: 25px; }
   }
   .worksflex>div { flex-direction: column-reverse; padding-bottom: 10px;
@@ -132,24 +192,26 @@
       &:first-child, &:last-child { text-align: center; width: 100%; }
       &:last-child { padding-bottom: 25px; }
       &:first-child {
+        > div {
+          &:before { display: none; }
+        }
         span { font-size: 22px; line-height: 28px; }
       }
     }
   }
-  .sectionthird { padding-top: 40px; }
-  .singlegarage { flex-direction: column; 
+  .singlegarage {
     > div { 
-      &:first-child { padding-bottom: 10px; width: 100%; 
+      &:first-child { padding-bottom: 10px;
         .pricequote { display: inline-block; }
       }
-      &:last-child { text-align: center; width: 100%; 
-        .pricequote { display: none; padding-bottom: 15px; }
+      &:last-child {
         a { margin-bottom: 0; 
           &.tertiary, &.quadrat { padding: 8px 10px; }
         }
       }
     }
   }
+  .topsection>div { padding: 20px 0; }
 }
 
 @media screen and (max-width:720px) {
@@ -161,7 +223,17 @@
   h3 { font-size: 26px; line-height: 34px; }
   h4 { font-size: 22px; line-height: 28px; }
   h5 { font-size: 16px; line-height: 24px; }
-  .listingarage>div:first-child { padding: 25px 15px 0; }
+}
+
+@media screen and (max-width:620px) {
+  .singlegarage { flex-direction: column; padding: 20px 20px 15px;
+    > div {
+      &:first-child { width: 100%; }
+      &:last-child { padding-top: 10px; text-align: left; width: 100%; }
+    }
+  }
+  .closereview { font-size: 20px; height: 30px; line-height: 34px; right: 20px; width: 30px; }
+  .reviewpop>div { padding-top: 50px; }
 }
 
 @media screen and (max-width:580px) {
@@ -194,20 +266,39 @@
       }
     }
   }
+  .sectionsecond { padding: 0; 
+      &:after { display: none; }
+      > div { padding-bottom: 0; }
+  }
+  .sectionthird { padding-top: 25px; }
+  .reviewmore { padding: 30px 20px 40px; }
 }
 
 @media screen and (max-width:540px) {
   .featureflex>div { justify-content: center; width: 100%; 
-    &:nth-child(even) { flex-direction: row-reverse; }
+    &:nth-child(even) { flex-direction: row-reverse; 
+      h5 { padding-left: 0; padding-right: 15px; }
+    }
   }
   .homeform { padding-bottom: 0; }
-  .sectionthird { padding-top: 30px; }
+  .sectionthird { padding-top: 35px; }
+  .topsection>div { padding: 10px 0; }
+  .carform .btn { padding: 10px 14px; }
+  .breadto { display: none; }
 }
 
 @media screen and (max-width:480px) {
   .topsection>div h1 span { font-size: 44px; line-height: 52px; }
   .sectionsecond>div { padding: 30px 0 0; }
   .featureflex { padding-bottom: 15px; }
+  .carform { padding: 45px 20px 30px; width: 100%;
+    .moreinfo { padding: 15px 0; }
+  }
+  .popfetch { padding: 15px; }
+  .singlegarage>div:first-child {
+    a.quadrat, a.tertiary { margin-bottom: 15px; margin-right: 0; width: 100%; }
+    a.quadrat:last-of-type { margin-bottom: 5px; }
+  }
 }
 
 @media screen and (max-width:380px) {
@@ -217,4 +308,10 @@
       &:last-child { margin-left: 0; text-align: center; }
     }
   }
+}
+@media screen and (max-width:340px) {
+  .popfetch { padding: 15px 10px; }
+  .carform { padding: 45px 15px 30px; }
+  .twopartreview .secondary { margin-right: 7px; }
+  .reviewmore { padding: 30px 15px 35px; }
 }
