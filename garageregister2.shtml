@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+      <title>Garage Liting - Fixmycar</title>
+      <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+      <link href="css/style.css" rel="stylesheet">
+   </head>
+   <body>
+   <header>
+   <div class="headflex">
+   <div>
+   <div id="nav-icon">
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   </div>
+   <a href="tel:9003104830" class="mobilecall"><i class="fas fa-phone"></i></a>
+   <a class="logo" href="index.shtml"><img src="images/logo.png" alt="Fix My Car" title="Fix My Car"></a>
+   <nav>
+   <ul>
+   <li><a href="garagelisting.shtml">Find Garages</a></li>
+   <li><a href="#">How it Works</a></li>
+   <li><a href="#">Contact</a></li>
+   </ul>
+   </nav>
+   </div>
+   <div>
+   <ul>
+   <li><a href="tel:9003104830" class="callmobile">9003104830</a></li>
+   <!-- <li><a href="#" class="loginface"><span>Welcome<br/>Mr John D</span><img src="images/profile.jpg" alt=""></a></li> -->
+   </ul>
+   </div>
+   </div>
+   </header>
+   <div class="container">
+      <div class="signupgarage">
+        <div class="signform">
+          <div class="signdesc">
+            <h6>Sign Up In Just 5 Minutes!</h6>
+            <p>We just need a few details about your business and you'll start receiving leads immediately.</p>
+          </div>
+          <div class="breadto breadgarage removespace">
+           <ul>
+             <li class="active">CONTACT DETAILS</li>
+             <li class="active">COMPANY DETAILS</li>
+             <li>PAYMENT DETAILS</li>
+           </ul>
+          </div>
+            <div class="inputbox">
+              <input type="text" name="" class="textbox" required>
+              <span>COMPANY NAME</span>
+           </div>
+           <div class="inputbox">
+              <textarea class="textbox" required rows="5"></textarea>
+              <span>About your business</span>
+           </div>
+           <div class="inputbox">
+              <input type="text" name="" class="textbox" required>
+              <span>VAT Number (If Registered)</span>
+           </div>
+           <div class="selectbox">
+             <div class="lowdown">
+                <ul>
+                   <li>Chennai</li>
+                   <li>Mumbai</li>
+                   <li>Hyderabad</li>
+                   <li>Paali</li>
+                </ul>
+             </div>
+             <span class="select">CHOOSE LOCATION</span>
+           </div>
+           <div class="dropaccord">
+              <span>Services What we Offer?</span>
+              <div>
+                <ul>
+                  <li><label class="checkboxnew">Air-Con, Heating and Cooling<input type="checkbox" name=""><span class="rect"></span></label></li>
+                  <li><label class="checkboxnew">Air-Con, Heating and Cooling<input type="checkbox" name=""><span class="rect"></span></label></li>
+                  <li><label class="checkboxnew">Air-Con, Heating and Cooling<input type="checkbox" name=""><span class="rect"></span></label></li>
+                  <li><label class="checkboxnew">Air-Con, Heating and Cooling<input type="checkbox" name=""><span class="rect"></span></label></li>
+                  <li><label class="checkboxnew">Air-Con, Heating and Cooling<input type="checkbox" name=""><span class="rect"></span></label></li>
+                </ul>
+              </div>
+           </div>
+           <div class="dropaccord">
+              <span>Makes What We work on?</span>
+              <div>
+                <ul>
+                  <li><label class="checkboxnew">Air-Con, Heating and Cooling<input type="checkbox" name=""><span class="rect"></span></label></li>
+                  <li><label class="checkboxnew">Air-Con, Heating and Cooling<input type="checkbox" name=""><span class="rect"></span></label></li>
+                  <li><label class="checkboxnew">Air-Con, Heating and Cooling<input type="checkbox" name=""><span class="rect"></span></label></li>
+                  <li><label class="checkboxnew">Air-Con, Heating and Cooling<input type="checkbox" name=""><span class="rect"></span></label></li>
+                  <li><label class="checkboxnew">Air-Con, Heating and Cooling<input type="checkbox" name=""><span class="rect"></span></label></li>
+                </ul>
+              </div>
+           </div>
+        </div>
+        <div class="nextbox">
+          <button class="btn secondary">NEXT</button>
+        </div>
+       </div>
+   </div>
+   <footer>
+   <div class="footflex">
+   <div>
+   <span>&copy; 2018 fixmycar.com</span>
+   </div>
+   <div>
+   <!-- <strong>Follow Us</strong> -->
+   <ul>
+   <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+   <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+   </ul>
+   </div>
+   </div>
+   </footer>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="js/main.min.js"></script>
+   </body>
+</html>

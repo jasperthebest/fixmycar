@@ -130,29 +130,10 @@
     		});
 		});
 
-		/* Drop Accord */
-		$('.dropaccord span').click(function(){
-			if(!$(this).parent().hasClass('active')) {
-				$(this).parent().addClass('active');
-				$(this).siblings('div').slideDown();
-			} else {
-				$('.dropaccord div').removeClass('active').slideUp();
-			}
-		});
-
 		/* BG intro */
 		$('[data-bg]').each(function(){
 		var curBg = $(this).data('bg');
 		$(this).css({'background-image':'url('+curBg+')'});
-		});
-
-		/* Slide down package */
-		$('.packagain li:first-child .packagelabel div').show();
-		$('.packagelabel').click(function(){
-			if(!$(this).find('input').is(':checked')) {
-				$('.packagelabel > div').slideUp();
-				$(this).find('div').slideDown();
-			}
 		});
 
 		/* Sorting Drop down */
@@ -166,11 +147,11 @@
 		});
 
 		/* Edit dropdown */
-		$('.select').click(function(e){
+		$('.selectbox a').click(function(e){
 			e.stopImmediatePropagation();
-			if(!$(this).parents('.selectbox').find('.lowdown').hasClass('active')) {
+			if(!$(this).siblings('.lowdown').hasClass('active')) {
 				$('.lowdown').removeClass('active');
-				$(this).parents('.selectbox').find('.lowdown').addClass('active');
+				$(this).siblings('.lowdown').addClass('active');
 			} else {
 				$('.lowdown').removeClass('active');
 			}

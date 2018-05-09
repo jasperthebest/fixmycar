@@ -285,6 +285,9 @@
   .topsection>div { padding: 10px 0; }
   .carform .btn { padding: 10px 14px; }
   .breadto { display: none; }
+  .signdesc { padding-bottom: 0; }
+  .garagemechanic { margin-bottom: 15px; }
+  .packagain { padding-bottom: 25px; }
 }
 
 @media screen and (max-width:480px) {
@@ -299,6 +302,7 @@
     a.quadrat, a.tertiary { margin-bottom: 15px; margin-right: 0; width: 100%; }
     a.quadrat:last-of-type { margin-bottom: 5px; }
   }
+  .signform { width: 100%; }
 }
 
 @media screen and (max-width:380px) {
@@ -308,6 +312,7 @@
       &:last-child { margin-left: 0; text-align: center; }
     }
   }
+  .billheader .checkme { margin: 15px 0 5px; position: relative; }
 }
 @media screen and (max-width:340px) {
   .popfetch { padding: 15px 10px; }

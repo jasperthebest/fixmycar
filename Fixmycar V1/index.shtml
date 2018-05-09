@@ -216,6 +216,7 @@
                </div>
                <div class="selectbox">
                <span class="desc">YOUR CAR BRAND</span>
+               <a href="#">EDIT</a>
                <span class="select">FORD</span>
                <div class="lowdown">
                   <ul>
@@ -228,6 +229,7 @@
                </div>
                <div class="selectbox">
                <span class="desc">CAR MODEL</span>
+               <a href="#">EDIT</a>
                <span class="select">Figo</span>
                <div class="lowdown">
                   <ul>
@@ -240,6 +242,7 @@
                </div>
                <div class="selectbox">
                <span class="desc">VARIANT</span>
+               <a href="#">EDIT</a>
                <span class="select">1.5 D Trend 1399 CC</span>
                <div class="lowdown">
                   <ul>
@@ -252,6 +255,7 @@
                </div>
                <div class="selectbox">
                <span class="desc">MAKE</span>
+               <a href="#">EDIT</a>
                <span class="select">2012</span>
                <div class="lowdown">
                   <ul>

@@ -69,6 +69,8 @@ h5 { color: $dgrey; font: 600 18px/24px $open; padding-bottom: 15px; }
 h6 { color: $dgrey; font: 600 14px/20px $open; padding-bottom: 10px; }
 p { padding-bottom: 25px; }
 a { color: $dgrey; transition: all .3s linear; }
+::-moz-selection { background: $btnyellow; color: $white; }
+::selection { background: $btnyellow; color: $white; }
 
 /* Home page */
 .btn { border-radius: 5px; display: inline-block; font-size: 15px; min-width: 120px; outline: 0; padding: 14px; text-align: center; transition: all .3s linear;
@@ -203,7 +205,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 .inputbox { position: relative; z-index: 6;
   span { color: $white; display: inline-block; font-size: 15px; left: 20px; position: absolute; text-transform: uppercase; transform: translateY(0) scale(1); transform-origin: left; transition: all .3s ease; top: 20px; z-index: -1; }
   .textbox { padding: 25px 20px 15px;
-    &:focus + span, &:valid + span { transform: translateY(-15px) scale(.65); }
+    &:focus + span, &:valid + span { transform: translateY(-15px) scale(.67); }
     &:focus ~ .downlister { opacity: 1; transform: translateY(0); visibility: visible; }
     &:focus:valid ~ .downlister { opacity: 1; visibility: visible; transform: translateY(0); }
   }
@@ -264,6 +266,14 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
   }
 }
 .breadto { background-color: $hblue; padding: 30px 0; text-align: center;
+  &.breadgarage { background-color: $white; padding-top: 40px;
+    &.removespace { padding-top: 0; }
+    ul { display: flex; 
+      li { color: $grey; flex: 1 1 33.33%; font-size: 14px; font-weight: 600; line-height: 18px; text-align: left; 
+        &:before { font-weight: 400; line-height: 23px; text-align: center; top: 50%; transform: translateY(-50%) rotateY(180deg) rotate(120deg); }
+      }
+    }
+  }
   ul {
     li { color: $white; display: inline-block; padding: 0 30px 0 35px; position: relative; 
       &:before { border: 1px solid $green; border-radius: 100%; color: $white; content: ''; height: 24px; left: 0; position: absolute; top: -2px; transform: rotateY(180deg) rotate(120deg); width: 24px; }
@@ -272,6 +282,9 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
       }
     }
   }
+}
+.tickmark { background-color: $green; border: 1px solid $green; border-radius: 100%; color: $white; display: inline-block; height: 32px; position: relative; top: 2.5px; text-align: center; transform: rotateY(180deg) rotate(120deg); width: 32px;
+  small { font-size: 100%; left: 11px; position: absolute; top: 5px; }
 }
 .quoteblock { background-color: $yellow2; padding: 20px 100px 25px 20px;
   //&.fixed { opacity: 1; position: fixed; right: 0; top: 0; width: 50%; z-index: 12; }
@@ -310,12 +323,13 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 }
 .rightoverlay { position: relative; z-index: 4; }
 #map_canvas { height: 100%; margin: 0px; padding: 0px; width: 100%; }
+.mapnew { height: 300px; width: 100%; }
 .listgare { border-top-left-radius: 5px; margin-left: -100px; position: relative; z-index: 5; }
 .singlegarage { background-color: $white; display: flex; flex-flow: row wrap; padding: 40px 100px 50px 50px; position: relative;
   &:last-child {
     &:before { display: none; }
   }
-  &:before { background-color: $borderyellow; bottom: 0; content: ''; height: 1px; left: 50px; position: absolute; width: calc(100% - 150px); } 
+  &:before { background-color: $borderyellow; bottom: 0; content: ''; height: 2.5px; left: 50px; position: absolute; width: calc(100% - 150px); } 
   > div {
     &:first-child { width: calc(100% - 160px);
       h5 { color: $blue2; font-weight: 600; padding-bottom: 10px; }
@@ -383,9 +397,10 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 .selectbox { border-bottom: 1px solid $borderyellow; padding: 10px 0; position: relative;
   .desc { color: rgba($grey, .4); display: block; font-size: 12px; padding-bottom: 2px; }
   a { color: $red; display: inline-block; font-size: 12px; position: absolute; right: 0; top: 10px; }
-  .select { display: block; font-size: 16px; font-weight: 600; }
+  .select { cursor: pointer; display: block; font-size: 16px; font-weight: 600; }
   .lowdown { background-color: $white; box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2); display: block; max-height: 158px; left: -35px; opacity: 0; overflow-y: auto; position: absolute; top: 100%; transition: all .3s ease-out; transform: translateY(10px); visibility: hidden; width: calc(100% + 70px); z-index: 9; 
     &.active { opacity: 1; transform: translateY(0); visibility: visible; }
+    &.active + .select:before { transform: translateY(-50%) rotate(180deg); }
     ul {
       li { cursor: pointer; font-size: 16px; font-weight: 600; padding: 5px 35px; transition: all .3s linear;
         &:hover { background-color: $bgyellow; color: $white; }
@@ -473,6 +488,134 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 }
 .closereview { background-color: $timeblue; border-radius: 100%; color: $white; display: inline-block; font-size: 28px; height: 40px; line-height: 46px; position: absolute; right: 90px; top: 0; transition: all .3s linear; width: 40px; text-align: center; 
   &:hover { background-color: $white; color: $timeblue; }
+}
+.topheader { padding: 40px 0; 
+  h1 { color: $btnyellow; font-size: 30px; font-weight: 600; letter-spacing: 1px; line-height: 40px; padding: 0; text-align: center; }
+}
+.pricelist { padding: 25px 0; }
+.priceflex { border-bottom: 1px solid $btnyellow; display: flex; flex-direction: row; padding: 15px 0;
+  &:first-of-type { border-bottom: 0; }
+  > div { flex: 0 1 160px; padding: 0 5px; text-align: center;
+    .btn { padding: 7px 14px; }
+    &:first-child { align-items: center; display: flex; flex: 1 1 0; text-align: left; 
+      .featuretext { display: inline-block; }
+    }
+  }
+}
+.packagebox { border-radius: 2px; box-shadow: 3px 3px 15px 4px rgba(0,0,0,0.1); display: block; font-size: 14px; font-weight: 600; line-height: 20px; padding: 10px; text-align: center; 
+  small { display: block; font-size: 16px; line-height: 20px; text-transform: uppercase; }
+}
+.shouldjoin { text-align: center; 
+  .orblock { display: inline-block; font-size: 17px; font-weight: 600; padding-bottom: 15px; }
+  h3 { padding-bottom: 35px; }
+}
+.leftlist { display: inline-block; padding-bottom: 40px; text-align: left; 
+  ul {
+    li { padding-bottom: 15px; }
+  }
+}
+.btnflexreport { display: flex; justify-content: space-between; margin: 0 auto; padding-bottom: 40px; width: 400px;
+  .btn { font-size: 14px; font-weight: 600; min-width: 190px; padding: 6px 14px; }
+}
+.signupgarage { padding: 50px 0 55px; }
+.signtopform { padding-bottom: 40px; }
+.signform { margin: 0 auto; width: 400px; 
+  h6 { font-size: 16px; }
+  .inputbox { 
+    .textbox { border-bottom: 0.8px solid rgba($txtblue, .2); color: $txtblue; }
+    span { color: $txtblue; font-size: 13px; font-weight: 600; }
+  }
+  .selectbox { border-bottom: 0.8px solid rgba(2,45,76,0.2); padding: 20px;
+    .select { color: rgba($txtblue, 0.8); font-size: 13px; font-weight: 600; position: relative; 
+      &:before { content: '\f078'; font: 900 18px/22px 'Font Awesome 5 Free'; position: absolute; right: -10px; top: 50%; transition: all .3s linear; transform: translateY(-50%) rotate(0); transform-origin: center; }
+    }
+    .lowdown { left: 0; width: 100%; }
+  }
+}
+.signdesc { padding-bottom: 5px; text-align: center; 
+  h6 { font-size: 16px; padding-bottom: 15px; }
+}
+.garagemechanic { box-shadow: 3px 3px 20px 5px rgba(0,0,0,0.1); display: flex; flex-direction: row; opacity: 0.99; z-index: 3;
+  label { cursor: pointer; flex: 1 1 50%; font-size: 16px; font-weight: 600; line-height: 20px; padding: 15px; position: relative; text-align: center; z-index: 3;
+    span { background-color: $yellow2; display: block; height: 100%; left: 0; opacity: 0; position: absolute; transition: all .3s ease; top: 0; width: 100%; z-index: -1; }
+    input { opacity: 0; height: 0; position: absolute; width: 0; 
+      &:checked + span { opacity: 1; }
+    }
+    small { display: block; font-size: 14px; line-height: 18px; }
+  }
+}
+.nextbox { padding-top: 35px; text-align: center; 
+  .btn { font-weight: 600; padding: 8px 14px; }
+}
+.checkme { cursor: pointer; display: block; position: relative;
+  .titlepact { color: rgba($txtblue, 0.8); font-size: 13px; font-weight: 600; }
+  input { height: 0; position: absolute; width: 0; 
+    &:checked + .rect:before { opacity: 1; }
+  }
+  .rect { border: 1px solid $checkblue; border-radius: 4px; display: inline-block; height: 15px; position: relative; width: 15px; 
+    &:before { background-color: $bblue; border-radius: 100%; content: ''; height: 7px; left: 50%; opacity: 0; position: absolute; top: 50%; transition: all .3s linear; transform: translate(-50%, -50%); width: 7px; }
+  }
+}
+.centerallbox { padding-bottom: 15px; text-align: center; }
+.checkboxnew { cursor: pointer; display: inline-block; padding-left: 25px; position: relative;
+  input { height: 0; position: absolute; width: 0; 
+    &:checked + .rect:before { opacity: 1; }
+  }
+  .rect { border: 1px solid $checkblue; border-radius: 4px; display: inline-block; height: 15px; left: 0; position: absolute; top: 3px; width: 15px; 
+    &:before { background-color: $bblue; border-radius: 100%; content: ''; height: 7px; left: 50%; opacity: 0; position: absolute; top: 50%; transition: all .3s linear; transform: translate(-50%, -50%); width: 7px; }
+  }
+}
+.checkpass { border-bottom: 0.8px solid rgba(2,45,76,0.2); position: relative;
+  .checkme { display: block; padding: 20px; 
+    .rect { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); }
+  }
+}
+.billheader { position: relative;
+  .checkme { display: inline-block; padding-left: 23px; position: absolute; right: 0; top: 0;
+    .rect { left: 0; position: absolute; top: 50%; transform: translateY(-50%); }
+  }
+}
+.signtopform {}
+.morecheckbox { padding-bottom: 30px; 
+  & + .nextbox { padding-top: 0; }
+}
+.flexallboxthree { display: flex; flex-direction: row wrap; 
+  > div { flex: 1 1 33.33%; 
+    .checkboxnew { display: block; padding-bottom: 15px; }
+  }
+}
+.morecheckbox {
+  h6 { color: $txtblue; font-size: 14px; font-weight: 600; padding-bottom: 30px; text-transform: uppercase; }
+}
+.packagain { padding-bottom: 35px;
+  > li { padding-bottom: 10px; }
+}
+.packagelabel { box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1); cursor: pointer; display: block; padding: 15px 20px 15px 45px; position: relative;
+  .radiotitle { color: $txtblue; display: block; font-size: 16px; font-weight: 700; text-align: center; text-transform: uppercase; }
+  input { height: 0; opacity: 0; position: absolute; width: 0; 
+    &:checked + .radiograph:before { opacity: 1; }
+  }
+  .radiograph { border: 1px solid $checkblue; border-radius: 100%; display: inline-block; height: 15px; left: 20px; position: absolute; top: 19px; width: 15px; 
+    &:before { background-color: $green; border-radius: 100%; content: ''; height: 7px; left: 50%; opacity: 0; position: absolute; top: 50%; transition: all .3s linear; transform: translate(-50%, -50%); width: 7px; }
+  }
+  div { display: none; padding: 15px 0 8px; text-align: center;
+    ul { display: inline-block;
+      li { color: $txtblue; font-size: 14px; font-weight: 600; padding-bottom: 2px; text-align: left; }
+    }
+  }
+}
+.subptitle { padding-bottom: 25px; }
+.dropaccord { border-bottom: 0.8px solid rgba(2,45,76,0.2);
+  > span { color: rgba($txtblue, 0.8); cursor: pointer; display: block; font-size: 13px; font-weight: 600; padding: 20px; position: relative; text-transform: uppercase; 
+    &:before { content: '\f078'; font: 900 18px/22px 'Font Awesome 5 Free'; position: absolute; right: 10px; top: 50%; transition: all .3s linear; transform: translateY(-50%) rotate(0); transform-origin: center; }
+  }
+  div { display: none; max-height: 168px; margin-bottom: 15px; overflow: auto; padding: 0 20px;
+    ul {
+      li {
+        .checkboxnew { padding-bottom: 8px; }
+      }
+    }
+  }
 }
 
 @import "responsive";

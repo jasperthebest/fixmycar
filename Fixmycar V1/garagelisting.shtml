@@ -275,22 +275,6 @@
                          <li><img src="images/nostar.png"></li>
                       </ul>
                     </div>
-                  </div>
-                  <div class="singlereview">
-                    <div>
-                      <img src="images/reviewface.jpg" alt="">
-                    </div>
-                    <div>
-                      <h6>Profile Name, Date</h6>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum sapien id imperdiet placerat. Vivamus vel nibh euismod, mattis diam ut, commodo neque. Maecenas lobortis sapien in felis convallis.</p>
-                      <ul class="starrate">
-                         <li><img src="images/star.png"></li>
-                         <li><img src="images/star.png"></li>
-                         <li><img src="images/star.png"></li>
-                         <li><img src="images/halfstar.png"></li>
-                         <li><img src="images/nostar.png"></li>
-                      </ul>
-                    </div>
                   </div>                                    
                 </div>
                 <a href="#" class="loadreviews">View All Reviews<i class="fas fa-chevron-right"></i></a>
@@ -328,7 +312,8 @@
                </div> 
               </div>
             </div>
-
+            
+            
           </div>
         </div>
       </div>
