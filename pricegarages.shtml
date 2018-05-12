@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-      <title>Fixmycar</title>
+      <title>Price of Garages - Fixmycar</title>
       <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
@@ -26,8 +26,8 @@
    <nav>
    <ul>
    <li><a href="garagelisting.shtml">Find Garages</a></li>
-   <li><a href="#">How it Works</a></li>
-   <li><a href="#">Contact</a></li>
+   <li><a href="index.shtml">How it Works</a></li>
+   <li><a href="pricegarages.shtml">Contact</a></li>
    </ul>
    </nav>
    </div>
@@ -45,157 +45,82 @@
    </div>
    <div class="container">
       <div class="pricelist">
-         <div class="priceflex">
+         <div class="pricepay">
             <div>
-               
+               <div class="boxshowprice">
+                  <div class="headtoprice">
+                     <h2>STARTER</h2>
+                  </div>
+                  <div class="pricecap">
+                     <span>₹ 5000</span>
+                     <small>per Annum</small>
+                  </div>
+                  <ul>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                  </ul>
+                  <a href="garageregister.shtml" class="btn tertiary">Get Started</a>
+               </div>  
             </div>
             <div>
-               <span class="packagebox"><small>Starter</small>Rs. 5000 / Annam</span>
+               <div class="boxshowprice">
+                  <div class="headtoprice">
+                     <h2>GROWTH</h2>
+                  </div>
+                  <div class="pricecap">
+                     <span>₹ 5000</span>
+                     <small>per Annum</small>
+                  </div>
+                  <ul>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                  </ul>
+                  <a href="garageregister.shtml" class="btn tertiary">Get Started</a>
+               </div>
             </div>
             <div>
-               <span class="packagebox"><small>Growth</small>Rs. 5000 / Annam</span>
+               <div class="boxshowprice">
+                  <div class="headtoprice">
+                     <h2>ENTERPRISE</h2>
+                  </div>
+                  <div class="pricecap">
+                     <span>₹ 5000</span>
+                     <small>per Annum</small>
+                  </div>
+                  <ul>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                  </ul>
+                  <a href="garageregister.shtml" class="btn tertiary">Get Started</a>
+               </div>
             </div>
             <div>
-               <span class="packagebox"><small>Enterprise</small>Rs. 5000 / Annam</span>
-            </div>
-            <div>
-               <span class="packagebox"><small>Platinum</small>Rs. 5000 / Annam</span>
-            </div>
-         </div>
-         <div class="priceflex">
-            <div>
-               <span>Unlimited Quoting</span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-         </div>
-         <div class="priceflex">
-            <div>
-               <span>Unlimited Quoting</span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-         </div>
-         <div class="priceflex">
-            <div>
-               <span>30-Days Free Support</span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-         </div>
-         <div class="priceflex">
-            <div>
-               <span>30-Days Free Support</span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-         </div>
-         <div class="priceflex">
-            <div>
-               <span>Item 04</span>
-            </div>
-            <div>
-               
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-         </div>
-         <div class="priceflex">
-            <div>
-               <span>Item 05</span>
-            </div>
-            <div>
-               
-            </div>
-            <div>
-               
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-         </div>
-         <div class="priceflex">
-            <div>
-               <span>Item 06</span>
-            </div>
-            <div>
-               
-            </div>
-            <div>
-               
-            </div>
-            <div>
-
-            </div>
-            <div>
-               <span class="tickmark"><small>7</small></span>
-            </div>
-         </div>
-         <div class="priceflex">
-            <div>
-               
-            </div>
-            <div>
-               <a href="#" class="btn secondary">Get Started</a>
-            </div>
-            <div>
-               <a href="#" class="btn secondary">Get Started</a>
-            </div>
-            <div>
-               <a href="#" class="btn secondary">Get Started</a>
-            </div>
-            <div>
-               <a href="#" class="btn secondary">Get Started</a>
+               <div class="boxshowprice">
+                  <div class="headtoprice">
+                     <h2>PLATINUM</h2>
+                  </div>
+                  <div class="pricecap">
+                     <span>₹ 5000</span>
+                     <small>per Annum</small>
+                  </div>
+                  <ul>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                     <li>Unlimited Quoting</li>
+                  </ul>
+                  <a href="garageregister.shtml" class="btn tertiary">Get Started</a>
+               </div>
             </div>
          </div>
       </div>

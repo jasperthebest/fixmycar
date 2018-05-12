@@ -153,7 +153,7 @@ header {
     }
   }
 }
-.topsection { align-items: center; display: flex;
+.topsection { align-items: center; display: flex; min-height: 650px;
   > div { padding: 50px 0; width: 100%; 
     h1 { color: $white; font-size: 30px; font-weight: 400; letter-spacing: 1px; line-height: 64px; padding-bottom: 40px;
       span { color: $btnyellow; display: block; font-size: 72px; font-weight: 600; letter-spacing: 1px; }
@@ -325,11 +325,11 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 #map_canvas { height: 100%; margin: 0px; padding: 0px; width: 100%; }
 .mapnew { height: 300px; width: 100%; }
 .listgare { border-top-left-radius: 5px; margin-left: -100px; position: relative; z-index: 5; }
-.singlegarage { background-color: $white; display: flex; flex-flow: row wrap; padding: 40px 100px 50px 50px; position: relative;
+.singlegarage { background-color: $white; border-bottom: 5px solid $borderyellow; box-shadow: 0 0 10px 5px rgba(0,0,0,0.15); display: flex; flex-flow: row wrap; margin-bottom: 15px; padding: 40px 100px 50px 50px; position: relative;
   &:last-child {
     &:before { display: none; }
   }
-  &:before { background-color: $borderyellow; bottom: 0; content: ''; height: 2.5px; left: 50px; position: absolute; width: calc(100% - 150px); } 
+  &:before { background-color: $borderyellow; bottom: 0; content: ''; display: none; height: 2.5px; left: 50px; position: absolute; width: calc(100% - 150px); } 
   > div {
     &:first-child { width: calc(100% - 160px);
       h5 { color: $blue2; font-weight: 600; padding-bottom: 10px; }
@@ -489,10 +489,10 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 .closereview { background-color: $timeblue; border-radius: 100%; color: $white; display: inline-block; font-size: 28px; height: 40px; line-height: 46px; position: absolute; right: 90px; top: 0; transition: all .3s linear; width: 40px; text-align: center; 
   &:hover { background-color: $white; color: $timeblue; }
 }
-.topheader { padding: 40px 0; 
+.topheader { padding: 40px 15px; 
   h1 { color: $btnyellow; font-size: 30px; font-weight: 600; letter-spacing: 1px; line-height: 40px; padding: 0; text-align: center; }
 }
-.pricelist { padding: 25px 0; }
+.pricelist { padding: 50px 0; }
 .priceflex { border-bottom: 1px solid $btnyellow; display: flex; flex-direction: row; padding: 15px 0;
   &:first-of-type { border-bottom: 0; }
   > div { flex: 0 1 160px; padding: 0 5px; text-align: center;
@@ -538,7 +538,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 .garagemechanic { box-shadow: 3px 3px 20px 5px rgba(0,0,0,0.1); display: flex; flex-direction: row; opacity: 0.99; z-index: 3;
   label { cursor: pointer; flex: 1 1 50%; font-size: 16px; font-weight: 600; line-height: 20px; padding: 15px; position: relative; text-align: center; z-index: 3;
     span { background-color: $yellow2; display: block; height: 100%; left: 0; opacity: 0; position: absolute; transition: all .3s ease; top: 0; width: 100%; z-index: -1; }
-    input { opacity: 0; height: 0; position: absolute; width: 0; 
+    input { height: 0; opacity: 0; position: absolute; width: 0; 
       &:checked + span { opacity: 1; }
     }
     small { display: block; font-size: 14px; line-height: 18px; }
@@ -549,7 +549,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 }
 .checkme { cursor: pointer; display: block; position: relative;
   .titlepact { color: rgba($txtblue, 0.8); font-size: 13px; font-weight: 600; }
-  input { height: 0; position: absolute; width: 0; 
+  input { height: 0; opacity: 0; position: absolute; width: 0; 
     &:checked + .rect:before { opacity: 1; }
   }
   .rect { border: 1px solid $checkblue; border-radius: 4px; display: inline-block; height: 15px; position: relative; width: 15px; 
@@ -558,7 +558,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
 }
 .centerallbox { padding-bottom: 15px; text-align: center; }
 .checkboxnew { cursor: pointer; display: inline-block; padding-left: 25px; position: relative;
-  input { height: 0; position: absolute; width: 0; 
+  input { height: 0; opacity: 0; position: absolute; width: 0; 
     &:checked + .rect:before { opacity: 1; }
   }
   .rect { border: 1px solid $checkblue; border-radius: 4px; display: inline-block; height: 15px; left: 0; position: absolute; top: 3px; width: 15px; 
@@ -616,6 +616,26 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
       }
     }
   }
+}
+.signformfade { display: none; }
+.pricepay { display: flex; flex-flow: row wrap; 
+  > div { flex: 0 1 25%; padding: 0 10px; }
+}
+.boxshowprice { box-shadow: 0 5px 25px 0 rgba(0,0,0,.15); height: 100%; padding-bottom: 65px; transform: scale(1); transition: all .25s ease; user-select: none; text-align: center;
+  &:hover { transform: scale(1.1); }
+  .headtoprice { background-color: $hblue; border-top-left-radius: 5px; border-top-right-radius: 5px; padding: 15px;
+    h2 { color: $white; font-size: 18px; line-height: 26px; padding-bottom: 0; text-transform: uppercase; }
+    small { display: block; font-size: 14px; line-height: 20px; }
+  }
+  .pricecap { border-bottom: 2px solid $bgyellow; padding: 20px 10px;
+    span { display: block; font-size: 30px; font-weight: 600; line-height: 36px; }
+  }
+  ul { display: inline-block; padding: 20px 15px 15px; text-align: left;
+    li { font-size: 12px; line-height: 16px; padding: 0 0 13px 23px; position: relative; 
+      &:before { background-color: $green; border: 1px solid $green; border-radius: 100%; color: $white; content: '7'; height: 16px; font-size: 10px; left: 0; position: absolute; text-align: center; top: 1px; transform: rotateY(180deg) rotate(120deg); width: 16px; }
+    }
+  }
+  .tertiary { bottom: 25px; left: 50%; padding: 7px 14px 9px; position: absolute; transform: translateX(-50%); }
 }
 
 @import "responsive";

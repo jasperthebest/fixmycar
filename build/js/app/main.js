@@ -13,15 +13,37 @@
 		});
 
 		/* Dropdown menu */
-		$('.downlister ul li').click(function(){
-			var listval = $(this).text();
-			$(this).parents('.downlister').siblings('.textbox').val(listval);
+		var insertcount = 0;
+		$(document).on("click", '.downlister ul li', function(){
+			if($(this).parents('.downlister').hasClass("urbancity")) {
+				if(insertcount == 1) {
+					var listval = $(this).text();
+					$(this).parents('.downlister').siblings('.textbox').val($(this).parents('.downlister').siblings('.textbox').val() + ' ' + listval);
+					insertcount = 0;
+				} else {
+					insertcount++;
+					var listval = $(this).text();
+					$(this).parents('.downlister').siblings('.textbox').val(listval).focus();
+				}
+			} else {
+				var listval = $(this).text();
+				$(this).parents('.downlister').siblings('.textbox').val(listval);
+			}
 		});
 
 		/* Header for subpage */
 		if($('.sectionfirst').length == 0) {
 			$('header').addClass('subpage');
 		}
+
+		/* Fade In / Fade Out Form */
+		$('#signform1').show();
+		$('.nextbox button').click(function(){
+			if($(this).parents('.signformfade').next('.signformfade').length != 0) {
+				$('.signformfade').fadeOut();
+				$(this).parents('.signformfade').next('.signformfade').fadeIn();
+			}
+		});
 
 		/* Initial Dropdown */
 		$('.textbox').keyup(function(){

@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-      <title>Fixmycar</title>
+      <title>Homepage - Fixmycar</title>
       <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
@@ -26,8 +26,8 @@
    <nav>
    <ul>
    <li><a href="garagelisting.shtml">Find Garages</a></li>
-   <li><a href="#">How it Works</a></li>
-   <li><a href="#">Contact</a></li>
+   <li><a href="index.shtml">How it Works</a></li>
+   <li><a href="pricegarages.shtml">Contact</a></li>
    </ul>
    </nav>
    </div>
@@ -55,7 +55,7 @@
    <div class="inputbox dropmanner">
    <input type="text" name="" class="textbox" required="">
    <span>Location</span>
-   <div class="downlister">
+   <div class="downlister urbancity">
    <h6>Popular Cities</h6>
    <ul>
    <li>Mumbai</li>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+      <title>Price of Garages - Fixmycar</title>
+      <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+      <link href="css/style.css" rel="stylesheet">
+   </head>
+   <body>
+   <div class="sectionfirst coverBG" data-bg="images/homebg.jpg">
+   <header>
+   <div class="headflex">
+   <div>
+   <div id="nav-icon">
+   <span></span>
+   <span></span>
+   <span></span>
+   <span></span>
+   </div>
+   <a href="tel:9003104830" class="mobilecall"><i class="fas fa-phone"></i></a>
+   <a class="logo" href="index.shtml"><img src="images/logo.png" alt="Fix My Car" title="Fix My Car"></a>
+   <nav>
+   <ul>
+   <li><a href="garagelisting.shtml">Find Garages</a></li>
+   <li><a href="#">How it Works</a></li>
+   <li><a href="#">Contact</a></li>
+   </ul>
+   </nav>
+   </div>
+   <div>
+   <ul>
+   <li><a href="tel:9003104830" class="callmobile">9003104830</a></li>
+   <!-- <li><a href="#" class="btn primary">Sign Up</a></li> -->
+   </ul>
+   </div>
+   </div>
+   </header>
+   <div class="container topheader">
+      <h1>Join The Largest Garage Network In Chennai</h1>
+   </div>
+   </div>
+   <div class="container">
+      <div class="pricelist">
+         <div class="priceflex">
+            <div>
+               
+            </div>
+            <div>
+               <span class="packagebox"><small>Starter</small>Rs. 5000 / Annam</span>
+            </div>
+            <div>
+               <span class="packagebox"><small>Growth</small>Rs. 5000 / Annam</span>
+            </div>
+            <div>
+               <span class="packagebox"><small>Enterprise</small>Rs. 5000 / Annam</span>
+            </div>
+            <div>
+               <span class="packagebox"><small>Platinum</small>Rs. 5000 / Annam</span>
+            </div>
+         </div>
+         <div class="priceflex">
+            <div>
+               <span>Unlimited Quoting</span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+         </div>
+         <div class="priceflex">
+            <div>
+               <span>Unlimited Quoting</span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+         </div>
+         <div class="priceflex">
+            <div>
+               <span>30-Days Free Support</span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+         </div>
+         <div class="priceflex">
+            <div>
+               <span>30-Days Free Support</span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+         </div>
+         <div class="priceflex">
+            <div>
+               <span>Item 04</span>
+            </div>
+            <div>
+               
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+         </div>
+         <div class="priceflex">
+            <div>
+               <span>Item 05</span>
+            </div>
+            <div>
+               
+            </div>
+            <div>
+               
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+         </div>
+         <div class="priceflex">
+            <div>
+               <span>Item 06</span>
+            </div>
+            <div>
+               
+            </div>
+            <div>
+               
+            </div>
+            <div>
+
+            </div>
+            <div>
+               <span class="tickmark"><small>7</small></span>
+            </div>
+         </div>
+         <div class="priceflex">
+            <div>
+               
+            </div>
+            <div>
+               <a href="#" class="btn secondary">Get Started</a>
+            </div>
+            <div>
+               <a href="#" class="btn secondary">Get Started</a>
+            </div>
+            <div>
+               <a href="#" class="btn secondary">Get Started</a>
+            </div>
+            <div>
+               <a href="#" class="btn secondary">Get Started</a>
+            </div>
+         </div>
+      </div>
+      <div class="shouldjoin">
+         <span class="orblock">OR</span>
+         <div class="btnflexreport">
+            <a href="#" class="btn quadrat">Request a Call Back</a>
+            <a href="#" class="btn quadrat">Create Free Profile</a>
+         </div>
+         <h3>Why Should You Join?</h3>   
+         <div class="leftlist">
+            <ul>
+               <li>- Over 40,000 Quote Requests nationwide every month</li>
+               <li>- Each job is worth £350 on average</li>
+               <li>- Our fees are LOW: average commission is just £10.80 + VAT</li>
+               <li>- Over 985,285 requests for quotes received</li>
+               <li>- Over 11,367 garages have joined our network</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <footer>
+   <div class="footflex">
+   <div>
+   <span>&copy; 2018 fixmycar.com</span>
+   </div>
+   <div>
+   <!-- <strong>Follow Us</strong> -->
+   <ul>
+   <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+   <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+   </ul>
+   </div>
+   </div>
+   </footer>
+   
+   <!-- script -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="js/main.min.js"></script>
+   </body>
+</html>

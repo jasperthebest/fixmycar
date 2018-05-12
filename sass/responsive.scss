@@ -124,7 +124,7 @@
     }
   }
   .rightoverlay { margin-right: 0; }
-  .singlegarage { border-bottom: 1px solid $borderyellow; padding: 20px; 
+  .singlegarage { border-bottom: 3px solid $borderyellow; padding: 20px; 
     &:before { display: none; }
     &:last-of-type { border-bottom: none; }
   }
@@ -135,6 +135,13 @@
   .sectionthird { padding-top: 10px; }
   .selectbox .lowdown { left: 0; width: 100%; }
   .reviewsidebar>div { padding-bottom: 30px; }
+  .pricelist { padding: 40px 0 15px; }
+  .pricepay {
+    > div { flex-basis: 50%; padding-bottom: 25px; }
+  }
+  .boxshowprice {
+    &:hover { transform: scale(1); }
+  }
 }
 
 @media screen and (max-width:940px) {
@@ -234,6 +241,9 @@
   }
   .closereview { font-size: 20px; height: 30px; line-height: 34px; right: 20px; width: 30px; }
   .reviewpop>div { padding-top: 50px; }
+  .pricepay {
+    > div { flex-basis: 100%; padding: 0 25px 25px; }
+  }
 }
 
 @media screen and (max-width:580px) {
@@ -304,8 +314,17 @@
     a.quadrat:last-of-type { margin-bottom: 5px; }
   }
   .signform { width: 100%; }
+  .pricepay>div { padding: 0 0 25px; }
+  .pricelist { padding: 40px 0 0;}
+  .btnflexreport { align-items: center; flex-direction: column; padding-bottom: 25px; width: 100%; 
+    .btn {
+      &:first-child { margin-bottom: 15px; }
+    }
+  }
+  .shouldjoin h3 { padding-bottom: 25px; }
+  .leftlist { padding-bottom: 35px; }
+  .topheader h1 { font-size: 24px; line-height: 34px; }
 }
-
 @media screen and (max-width:380px) {
   footer .footflex { flex-direction: column; 
     > div {

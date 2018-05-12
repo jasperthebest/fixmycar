@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-      <title>Garage Liting - Fixmycar</title>
+      <title>Garage Listing - Fixmycar</title>
       <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
@@ -25,8 +25,8 @@
    <nav>
    <ul>
    <li><a href="garagelisting.shtml">Find Garages</a></li>
-   <li><a href="#">How it Works</a></li>
-   <li><a href="#">Contact</a></li>
+   <li><a href="index.shtml">How it Works</a></li>
+   <li><a href="pricegarages.shtml">Contact</a></li>
    </ul>
    </nav>
    </div>
@@ -70,7 +70,7 @@
    <span><strong>Full Service</strong> Ford Figo 1.5 Trend 1399 cc 2012 make</span>
    </div>
    <div>
-   <a href="#">EDIT</a>
+   <a href="index.shtml">EDIT</a>
    </div>
    </div>
    </div>
@@ -472,7 +472,9 @@
               var map = new google.maps.Map(mapElement, mapOptions);
               var locations = [{"title":"Chennai Central Railway Station Waiting Hall","address":"Kannappar Thidal, Periyamet, Kannappar Thidal, Periyamet, Chennai, Tamil Nadu 600003, India","desc":"","tel":"044 2535 7398","int_tel":"+91 44 2535 7398","email":"","web":"http://www.sr.indianrailways.gov.in/","web_formatted":"sr.indianrailways.gov.in","open":"","time":"","lat":13.0824416,"lng":80.2758222,"vicinity":"Kannappar Thidal, Periyamet, Chennai","marker":"","iw":{"address":true,"desc":true,"email":true,"enable":true,"int_tel":true,"open":true,"open_hours":true,"photo":true,"tel":true,"title":true,"web":true}}];
               var image = {
-                   url: 'images/mappin.png'
+                   url: 'images/mappinned.png',
+                   size: new google.maps.Size(115, 86),
+                   labelOrigin: new google.maps.Point(55, 22)
                  };    
               for (i = 0; i < locations.length; i++) {
                 marker = new google.maps.Marker({
