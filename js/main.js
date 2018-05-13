@@ -110,12 +110,24 @@
 			if($(this).parents('.downlister').hasClass("urbancity")) {
 				if(insertcount == 1) {
 					var listval = $(this).text();
-					$(this).parents('.downlister').siblings('.textbox').val($(this).parents('.downlister').siblings('.textbox').val() + ' ' + listval);
+					$(this).parents('.downlister').siblings('.textbox').val($(this).parents('.downlister').siblings('.textbox').val() + ', ' + listval);
+					var listcity = ["Mumbai", "Chennai", "Mumbai", "Mumbai", "Mumbai", "Mumbai", "Mumbai", "Mumbai"];
+					var listhtml = "";
+					for(var i = 0; i <= listcity.length; i++) {
+						listhtml += "<li>" + listcity[i] + "</li>";
+					}
+					$(this).parent().html(listhtml);
 					insertcount = 0;
 				} else {
 					insertcount++;
 					var listval = $(this).text();
 					$(this).parents('.downlister').siblings('.textbox').val(listval).focus();
+					var listcity = ["Potheri", "Guindy", "Express Avenue", "Fort White", "Potheri", "Guindy", "Express Avenue", "Fort White", "Potheri", "Guindy", "Express Avenue", "Fort White"];
+					var listhtml = "";
+					for(var i = 0; i <= listcity.length; i++) {
+						listhtml += "<li>" + listcity[i] + "</li>";
+					}
+					$(this).parent().html(listhtml);
 				}
 			} else {
 				var listval = $(this).text();
