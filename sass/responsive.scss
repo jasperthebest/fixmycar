@@ -299,6 +299,7 @@
   .garagemechanic { margin-bottom: 15px; }
   .packagain { padding-bottom: 25px; }
   .signupgarage { padding: 40px 0; }
+  .bookcallhere { width: 100%; }
 }
 
 @media screen and (max-width:480px) {
@@ -308,7 +309,7 @@
   .carform { padding: 45px 20px 30px; width: 100%;
     .moreinfo { padding: 15px 0; }
   }
-  .popfetch { padding: 15px; }
+  .popfetch, .popmobup { padding: 15px; }
   .singlegarage>div:first-child {
     a.quadrat, a.tertiary { margin-bottom: 15px; margin-right: 0; width: 100%; }
     a.quadrat:last-of-type { margin-bottom: 5px; }
@@ -335,7 +336,7 @@
   .billheader .checkme { margin: 15px 0 5px; position: relative; }
 }
 @media screen and (max-width:340px) {
-  .popfetch { padding: 15px 10px; }
+  .popfetch, .popmobup { padding: 15px 10px; }
   .carform { padding: 45px 15px 30px; }
   .twopartreview .secondary { margin-right: 7px; }
   .reviewmore { padding: 30px 15px 35px; }

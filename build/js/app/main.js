@@ -8,7 +8,11 @@
 
 		/* Outer Click */
 		$('body').click(function(){
-			$('html').removeClass('popact');
+			if($('html').hasClass('popactmobile')) {
+				$('html').removeClass('popactmobile');
+			} else {
+				$('html').removeClass('popact');
+			}
 			$('.lowdown').removeClass('active');
 		});
 
@@ -133,7 +137,7 @@
 			$('html').removeClass('popact');
 			return false;
 		});
-		$('.carform, .popactbtn, .reviewmore').click(function(e){
+		$('.carform, .popactbtn, .reviewmore, .bookcallhere').click(function(e){
 			e.stopImmediatePropagation();
 		});
 
@@ -141,6 +145,12 @@
 		$('#nav-icon').click(function(){
 			$(this).toggleClass('active');
 			$('nav').toggleClass('active');
+		});
+
+		/* Confirm Popup */
+		$('.callpopupd').click(function(){
+			$('html').addClass('popactmobile');
+			return false;
 		});
 
 		/* Scroll Animation */ 

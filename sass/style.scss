@@ -58,6 +58,11 @@ html { background-color: $white;
       .popfetch { opacity: 1; transform: scale(1); visibility: visible; }
     }
   }
+  &.popactmobile {
+    body { height: 100%; overflow: hidden; position: relative;
+      .popmobup { opacity: 1; transform: scale(1); visibility: visible; }
+    }
+  }
 }
 body { background-color: $white; color: $grey; font: 400 14px/22px $open; opacity: 0; }
 .coverBG { background-size: cover; background-repeat: no-repeat; }
@@ -311,7 +316,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
   }
 }
 .detailserve { background-color: $hblue; border-radius: 5px; display: flex; flex-flow: row wrap; margin-left: -120px; padding: 10px 15px; position: relative; z-index: 4;
-  &.fixed { margin-left: 0; position: fixed; right: 100px; top: 0; width: 50%; z-index: 6; }
+  &.fixed { border-top-left-radius: 0; border-top-right-radius: 0; margin-left: 0; position: fixed; right: 100px; top: 0; width: 50%; z-index: 6; }
   > div {
     &:first-child { padding-right: 10px; width: calc(100% - 30px); }
     &:last-child { width: 30px; }
@@ -372,9 +377,10 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
     }
   }
 }
-.popfetch { background-color: rgba($bgyellow, .7); height: 100%; left: 0; opacity: 0; overflow-y: auto; padding: 25px; position: fixed; top: 0; transform: scale(0.9); transition: all .3s linear; visibility: hidden; width: 100%; z-index: 21; 
+.popfetch, .popmobup { background-color: rgba($bgyellow, .7); height: 100%; left: 0; opacity: 0; overflow-y: auto; padding: 25px; position: fixed; top: 0; transform: scale(0.9); transition: all .3s linear; visibility: hidden; width: 100%; z-index: 21; 
   &.reviewfetch { padding-right: 0; }
 }
+.popmobup { z-index: 23; }
 .carshowflex { align-items: center; display: flex; justify-content: center; }
 .closepop { display: inline-block; font-size: 25px; line-height: 25px; position: absolute; right: 10px; top: 10px; z-index: 3; 
   &:hover { color: $bgyellow; }
@@ -487,6 +493,7 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
    &:hover { color: $numyellow; } 
 }
 .closereview { background-color: $timeblue; border-radius: 100%; color: $white; display: inline-block; font-size: 28px; height: 40px; line-height: 46px; position: absolute; right: 90px; top: 0; transition: all .3s linear; width: 40px; text-align: center; 
+  &.closeconfirm { font-size: 16px; height: 22px; line-height: 25px; right: 10px; top: 10px; width: 22px; }
   &:hover { background-color: $white; color: $timeblue; }
 }
 .topheader { padding: 40px 15px; 
@@ -636,6 +643,14 @@ footer { background: rgba(4,41,67,1); background: -webkit-linear-gradient(top, r
     }
   }
   .tertiary { bottom: 25px; left: 50%; padding: 7px 14px 9px; position: absolute; transform: translateX(-50%); }
+}
+.mobileconfirm { align-items: center; display: flex; justify-content: center; height: 100%; 
+  > div { position: relative; }
+}
+.bookcallhere { background-color: $white; border-radius: 10px; padding: 20px 20px 25px; text-align: center; width: 440px; 
+  h4 { color: $bblue; }
+  p { padding-bottom: 15px; }
+  .btn { padding: 9px 20px; }
 }
 
 @import "responsive";
