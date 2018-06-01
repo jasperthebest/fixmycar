@@ -95,6 +95,7 @@
               </ul>
            </div>
            <span class="select">CHOOSE LOCATION</span>
+           <input type="hidden" name="">
          </div>
          <div class="checkpass">
            <label class="checkme">
@@ -137,6 +138,7 @@
                   </ul>
                </div>
                <span class="select">CHOOSE LOCATION</span>
+               <input type="hidden" name="">
              </div>
              <div class="dropaccord">
                 <span>Services What we Offer?</span>
@@ -296,6 +298,7 @@
                     </ul>
                  </div>
                  <span class="select">CHOOSE LOCATION</span>
+                 <input type="hidden" name="">
                </div>
               </div>
               <div class="nextbox">

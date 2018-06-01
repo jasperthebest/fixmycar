@@ -143,6 +143,18 @@
    <div>
    <div>
    <span>4</span>
+   <h4>Payment</h4>
+   <p>To show you’re happy, leave the garage a review and recommend the garage to friends and others on WhoCanFixmycar.com</p>
+   </div>
+   </div>
+   <div>
+   <img src="images/homeillu5.png" alt="">
+   </div>
+   </div>
+   <div>
+   <div>
+   <div>
+   <span>5</span>
    <h4>Leave a Review</h4>
    <p>To show you’re happy, leave the garage a review and recommend the garage to friends and others on WhoCanFixmycar.com</p>
    </div>
@@ -221,10 +233,11 @@
                   <ul>
                      <li>BMW</li>
                      <li>AUDI</li>
-                     <li>BENZ</li>
-                     <li>ALICE</li>
+                     <li class="selectedoption">BENZ</li>
+                     <li >FORD</li>
                   </ul>
                </div>
+               <input type="hidden" name="">
                </div>
                <div class="selectbox">
                <span class="desc">CAR MODEL</span>
@@ -237,6 +250,7 @@
                      <li>Vrit</li>
                   </ul>
                </div>
+               <input type="hidden" name="">
                </div>
                <div class="selectbox">
                <span class="desc">VARIANT</span>
@@ -249,6 +263,7 @@
                      <li>1.2 D Trend 1099 CC</li>
                   </ul>
                </div>
+               <input type="hidden" name="">
                </div>
                <div class="selectbox">
                <span class="desc">MAKE</span>
@@ -261,6 +276,7 @@
                      <li>2015</li>
                   </ul>
                </div>
+               <input type="hidden" name="">
                </div>
                <div class="inputbox">
                   <input type="text" name="" class="textbox" required="">
